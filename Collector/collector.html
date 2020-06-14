@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Collector </title>
+ 
+    <link href="styles\collector_style.css" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR---------------------------->
+    <div class="menu_bar">
+            <ul>
+               <li><a href="http://localhost/roll13/oms/login.html" class = "link">Logout</a></li>
+             </ul>
+        </div>
+    <!---------------------------------------------->
+
+    <!-- Container for rest of body elements-------->
+    <div class="form-box">
+        <!--Create TD block------------------------->
+            <h1 class="A">Search Transaction</h1>
+        <form class = "input-group">
+            <input type = "number" placeholder="Type the transaction id here..." id = "search" class = "input-field">
+            <button type = "submit" class = "btn">SEARCH</button>
+        </form>
+            <h1 class="B">Transaction To Approve</h1>
+        <!------------------------------------------->
+        <form class="output-group">
+            <div class="name">
+                <label  class="label-field">Transaction Id</label>
+                <input type="number" id="u_name" class="output-field" disabled>
+            </div>
+            <br>
+            <div class="name">
+                <label  class="label-field">Account No.</label>
+                <input type="number" id="address" class="output-field" disabled>
+            </div>
+            <br>
+            <div class="name">
+                <label  class="label-field">Date</label>
+                <input type="date" id="dob" class="output-field" disabled>
+            </div>
+            <br>
+            <div class="name">
+                <label  class="label-field">Type</label>
+                <input type="text" id="phone" class="output-field" disabled>
+            </div>
+            <br>
+            <div class="name">
+                <label  class="label-field">Amount</label>
+                <input type="number" id="mail" class="output-field" disabled>
+            </div>
+            <br>
+            <div class="name">
+                <label  class="label-field">Govt. ID</label>
+                <input type="text" id="gid" class="output-field" disabled>
+            </div>
+            <br>
+            <button type="submit" class="btn-approve" >APPROVE</button>
+        </form>
+        
+       
+        <!---------------------------------------------->
+
+        <script src="scripts/main.js"></script>
+    </div> 
+    </body>
+</html>

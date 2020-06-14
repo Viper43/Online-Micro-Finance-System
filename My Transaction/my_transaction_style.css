@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-image: url(../images/bank.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.form-box {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: auto;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 17;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: 0;
+    color: #2bab0d;
+    background: #fff;
+    outline: none;
+    letter-spacing: 2;
+    border: 2px solid #2bab0d;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    color: #fff;
+    background: #2bab0d;
+}
+
+.form-box h1 {
+    margin-top: 10px;
+    letter-spacing: 1;
+    color: rgba(17, 7, 34, 0.9);
+}
+/*menu bar */
+.menu_bar{
+    background: rgb(0,0,0);
+    text-align: right;
+    z-index: 3;
+}
+.menu_bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    text-align: center;
+}
+.menu_bar ul li{
+    width: auto;
+    margin: 22px;
+    padding: 15px;
+    transition: 0.2s;
+}
+.menu_bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.active, .menu_bar ul li:hover{
+   /* background: #2bab0d;*/
+    content: '';
+    border-bottom-width: 0%;
+    border-bottom: 4px solid #fff;
+    transition: 0.3s;
+}
+
+.menu_bar ul li:hover{
+    /* background: #2bab0d;*/
+     content: '';
+     border-bottom-width: 100%;
+     border-bottom: 4px solid #fff;
+     transition: 0.3s;
+ }
+
+.sub_menu{
+    display: none;
+    z-index: 3;
+
+}
+.menu_bar ul li:hover .sub_menu{
+    display: block;
+    position: absolute;
+    background: rgb(0,0,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu_bar ul li:hover .sub_menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu_bar ul li:hover .sub_menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu_bar ul li:hover .sub_menu ul li:last-child{
+    border-bottom: none;
+}
+.menu_bar ul li:hover .sub_menu ul li :hover
+{
+    font-style: italic;
+}
+
+/*--------------*/
+.table-wrapper{
+    width: 85%;
+    margin: 30px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 14px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #2bab0d;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: rgb(0,100,0);
+}
+
+.fl-table tr:nth-child(even) {
+  background: rgba(226, 226, 226, 0.9);
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .fl-table {
+      display: block;
+      width: 100%;
+  }
+  .table-wrapper:before{
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: white;
+      padding: 0 0 10px;
+  }
+  .fl-table thead, .fl-table tbody, .fl-table thead th {
+      display: block;
+  }
+  .fl-table thead th:last-child{
+      border-bottom: none;
+  }
+  .fl-table thead {
+      float: left;
+  }
+  .fl-table tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+  }
+  .fl-table td, .fl-table th {
+      padding: 20px .625em .625em .625em;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 120px;
+      font-size: 13px;
+      text-overflow: ellipsis;
+  }
+  .fl-table thead th {
+      text-align: left;
+      border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table tbody tr {
+      display: table-cell;
+  }
+  .fl-table tbody tr:nth-child(odd) {
+      background: none;
+  }
+  .fl-table tr:nth-child(even) {
+      background: transparent;
+  }
+  .fl-table tr td:nth-child(odd) {
+      background: #F8F8F8;
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tr td:nth-child(even) {
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tbody td {
+      display: block;
+      text-align: center;
+  }
+}

@@ -22,73 +22,116 @@
              </ul>
         </div>
 
+        <!--.........................Transaction History......................-->
+        
         <div class = "form-box">
-            <button type = "submit" class = "btn">Money Transfers</button>
-            <h1> My Transactions </h1>
+            <button type = "submit" class = "btn" id="transferbtn" onclick="moneytransfer()">Money Transfers</button>
+            <h1 class="A" id="A"> Transaction History </h1>
             
-            <div class="table-wrapper">
-            <table class="fl-table">
-                <thead>
-                <tr>
-                    <th>TD ID</th>
-                    <th>AMOUNT</th>
-                    <th>TENURE(years)</th>
-                    <th>CREATION DATE</th>
-                </tr>
-                </thead>
+            <div class="table-wrapper" id="transaction">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>T ID</th>
+                            <th>TYPE</th>
+                            <th>ACCOUNT NO.</th>
+                            <th>DATE</th>
+                            <th>AMOUNT</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A103</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                            <td>Approved</td>
+                        </tr>
+                        <tr>
+                            <td>T3465</td>
+                            <td>Withdrawal</td>
+                            <td>A129</td>
+                            <td>05-04-2020</td>
+                            <td>40000</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>T7865</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>20-09-2018</td>
+                            <td>1000</td>
+                            <td>Approved</td>
+                        </tr>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                            <td>Approved</td>
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
 
-                <tbody>
-                <tr>
-                    <td>2765</td>
-                    <td>20000</td>
-                    <td>2</td>
-                    <td>20/01/2020</td>
-                </tr>
-                <tr>
-                    <td>4256</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>9/04/2020</td>
-                </tr>
-                <tr>
-                    <td>8239</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>17/05/2020</td>
-                </tr>
-                <tr>
-                    <td>8239</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>17/05/2020</td>
-                </tr>
-                <tr>
-                    <td>8239</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>17/05/2020</td>
-                </tr>
-                <tr>
-                    <td>8239</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>17/05/2020</td>
-                </tr>
-                <tr>
-                    <td>8239</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>17/05/2020</td>
-                </tr>
-                <tr>
-                    <td>8239</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>17/05/2020</td>
-                </tr>
-                <tbody>
-            </table>
+            <!--........................Money Transfer......................-->
+
+            <button type = "submit" class = "btn" id = "transactionbtn" onclick="transactionhistory()">Transaction History</button>
+            <h1 class="B" id="B"> Money Transfers </h1>
+            
+            <div class="table-wrapper" id="money-transfer">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>T ID</th>
+                            <th>TYPE</th>
+                            <th>ACCOUNT NO.</th>
+                            <th>DATE</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A103</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>T3465</td>
+                            <td>Withdrawal</td>
+                            <td>A129</td>
+                            <td>05-04-2020</td>
+                            <td>40000</td>
+                        </tr>
+                        <tr>
+                            <td>T7865</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>20-09-2018</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
+
         </div>
-        </div>
+
+        <!--.........................script......................-->
+        
+        <script src = "scripts\My_transaction_js.js"></script>
     </body>
 </html>

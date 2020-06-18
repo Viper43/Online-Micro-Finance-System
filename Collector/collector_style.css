@@ -13,45 +13,6 @@ body{
 }
 
 /*-------------------------------------------------*/
-/*--------MENU BAR-----------------------------*/
-.menu_bar{
-    background: rgb(0,0,0);
-    text-align: right;
-    z-index: 3;
-}
-.menu_bar ul{
-    display: inline-flex;
-    list-style: none;
-    color: #fff;
-    text-align: center;
-}
-.menu_bar ul li{
-    width: auto;
-    margin: 22px;
-    padding: 15px;
-    transition: 0.2s;
-}
-.menu_bar ul li a{
-    text-decoration: none;
-    color: #fff;
-    transition: 0.2s;
-}
-
-.active, .menu_bar ul li:hover{
-   /* background: #2bab0d;*/
-    content: '';
-    border-bottom: 4px solid #fff;
-    transition: 0.3s;
-}
-
-.menu_bar ul li:hover{
-    /* background: #2bab0d;*/
-     content: '';
-     border-bottom: 4px solid #fff;
-     transition: 0.3s;
-}
-
-/*-------------------------------------------------*/
 /* Add a box container for all body elements */
 .form-box {
     width: 70%;
@@ -143,11 +104,11 @@ input::-webkit-outer-spin-button{
 
 /*------------------------OUTPUT fields--------------------------------*/
 .output-group {
-    margin-top: 5% ;
+    margin-top: 5%;
     transition: .5s;
     width: 100%;
     background: transparent;
-    text-align: center;
+    text-align: right;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,19 +131,100 @@ input::-webkit-outer-spin-button{
 }
 
 .label-field {
-
+    font-family: sans-serif;
+    font-size: 17;
 }
 
 .btn-approve {
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 25px;
     position: relative;
     letter-spacing: 1px;
-    padding: 15px 50px;
+    padding: 12px 50px;
     border-radius: 25px;
-    border: none;
+    color: #7a007a;
+    border: 2px solid #7a007a;
     outline: none;
     cursor: pointer;
-    background: #ffc107;
+    background: #ffffff;
 }
+
+.btn-approve:hover {
+    background: #7a007a;
+    color: #ffffff;
+}
+
 /*---------------------------------------------------------*/
+/*-------------------------------------------------*/
+/*--------MENU BAR-----------------------------*/
+.menu_bar{
+    background: rgb(0,0,0);
+    text-align: right;
+    z-index: 3;
+}
+.menu_bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    text-align: center;
+}
+.menu_bar ul li{
+    width: auto;
+    margin: 22px;
+    padding: 15px;
+    transition: 0.2s;
+}
+.menu_bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.active, .menu_bar ul li:hover{
+   /* background: #2bab0d;*/
+    content: '';
+    border-bottom: 4px solid #fff;
+    transition: 0.3s;
+}
+
+.menu_bar ul li:hover{
+    /* background: #2bab0d;*/
+     content: '';
+     border-bottom: 4px solid #fff;
+     transition: 0.3s;
+ }
+
+.sub_menu{
+    display: none;
+    z-index: 3;
+
+}
+.menu_bar ul li:hover .sub_menu{
+    display: block;
+    position: absolute;
+    background: rgb(0,0,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu_bar ul li:hover .sub_menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu_bar ul li:hover .sub_menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu_bar ul li:hover .sub_menu ul li:last-child{
+    border-bottom: none;
+}
+.menu_bar ul li:hover .sub_menu ul li :hover
+{
+    font-style: italic;
+}

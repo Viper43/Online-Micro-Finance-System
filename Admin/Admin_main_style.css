@@ -1,10 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 16px; 
+    font-family: sans-serif;
 }
 
 body {
-    background-image: url(iron_man_3_2013_movie-wallpaper-3840x2160.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -102,13 +103,18 @@ body {
     margin-top: 5% ;
     transition: .5s;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: transparent;
     text-align: center;   
 }
 .input-field {
     font-size: 16px;
+    letter-spacing: 1px;
     outline: 0;
-    width: 42%;
+    width: 45%;
     padding: 10px 40px;
     text-align: center;
     margin-bottom: 25px;
@@ -125,21 +131,23 @@ input::-webkit-outer-spin-button{
 }
 
 .btn {
-    color: #ffffffea;
+    color: #2b5555;
     font-size: 16px;
+    letter-spacing: 1px;
     margin-bottom: 25px;
     position: relative;
     padding: 10px 30px;
     border-radius: 25px;
-    border: none;
+    border: 2px solid #2b5555;
     outline: none;
     cursor: pointer;
-    background: #ffc107;
+    background: #ffffff;
     margin-right: 1%;
     margin-left: 55%;
 }
 .btn:hover {
-    background: #e76f51;
+    background:#2b5555;
+    color: #ffffff;
 }
 
 .form-box h1.A {
@@ -165,7 +173,11 @@ input::-webkit-outer-spin-button{
 
 /*----------Checkbox-----------------*/
 .check-container {
+    width: 50%;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .checkbox-container {
@@ -175,7 +187,7 @@ input::-webkit-outer-spin-button{
     padding-left: 10px;
     margin-bottom: 10px;
     text-align: left;
-    left: 40%;
+    left: 35%;
     font-family: sans-serif;
     font-size: 17;
     -webkit-user-select: none;
@@ -196,7 +208,7 @@ input::-webkit-outer-spin-button{
     background: #eee;
     border-radius: 5px;
     top: 0;
-    left: -3%;
+    left: -8%;
 }
 
 .checkbox-container input:checked + .checkmark {

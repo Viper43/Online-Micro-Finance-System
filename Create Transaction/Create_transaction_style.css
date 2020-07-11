@@ -29,7 +29,7 @@ body{
 /*=================== Image ========================*/
 
 .image {
-    background-image: url(../images/gratisography-326H_flip.jpg);
+    background-image: url(../images/cq5dam.web.1082.378.jpg);
     display: block;
     margin: auto;
 
@@ -134,18 +134,20 @@ body{
 
 /*===================== Drop Down =================*/
 
+
 .dropdown {
     font-size: 16px;
     outline: 0;
     width: 400px;
-    padding: 10px 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
     text-align: center;
     margin-bottom: 25px;
-    border-radius: 15px;
+    border-radius: 25px;
     background: rgb(236, 226, 226);
     border: none;
     transition: 0.2s;
- 
 }
 
 .dropdown:hover .option {
@@ -255,4 +257,3 @@ input::-webkit-outer-spin-button{
 {
     font-style: italic;
 }
-

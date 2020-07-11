@@ -3,7 +3,7 @@
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
                       
-        $sql = "SELECT * FROM transactions WHERE Account_No = '12345678' AND Status = 'Pending'";
+        $sql = "SELECT * FROM transactions WHERE Account_No = '1234567891' AND Status = 'Pending'";
         $query = $db->query($sql);
 
         $row_Count = $query->rowCount();
@@ -32,12 +32,12 @@
     <body onload = allowCreation(<?php echo $flag ?>) >
         <div class="menu_bar">
             <ul>
-                <li class="active"><a href="#">Home</a></li>
-               <li><a href="#">Transaction</a>
+                <li ><a href="#">Home</a></li>
+               <li class="active"><a href="#">Transaction</a>
                     <div class="sub_menu">
                         <ul>
                             <li><a href="#">Create</a></li>
-                            <li><a href="#">View</a></li>
+                            <li><a href="http://localhost/Viper/Login_system/My_transactions.php">View</a></li>
                         </ul>
                     </div>
                </li>
@@ -63,7 +63,7 @@
                  
                 <div class="container">
                         
-                    <label  class="label-field"> Transaction Id
+                    <label  class="label-field"> TRANSACTION ID
                         <input type ="number" class = "input-field" name = "transaction_id" readonly value = "<?php echo $transaction_Id ?>" >
                     </label>
 
@@ -93,7 +93,6 @@
 
                 </div>
 
-                <br>
                     
                 <button type="submit" class="btn" name = "cancel"> CANCEL </button>
                 
@@ -119,12 +118,12 @@
                     
                     <label  class="label-field" id = "rec"> RECEIVER
                         <input type ="number" id = "recacc" class = "input-field" name = "receiver" disabled required>
+                        <br>
                     </label>
                     
-                    <br>
                     
                     <label  class="label-field" id="tenure-label"> AMOUNT
-                        <input type ="number" class = "input-field" name = "amount" required>
+                        <input type ="number" class = "input-field" name = "amount" placeholder = "₹" required>
                     </label>
 
                 </div>

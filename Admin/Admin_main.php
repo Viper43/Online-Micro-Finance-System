@@ -8,7 +8,7 @@
         <div class="menu_bar">
             <ul>
                 <li class="active"><a href="#"> Home </a></li>
-                <li><a href="#"> Interest Rates </a></li>
+                <li><a href="http://localhost/Viper/Login_system/Interest_rates.php"> Interest Rates </a></li>
                 <li><a href="http://localhost/roll13/oms/login.html"> Logout </a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
@@ -16,7 +16,8 @@
         
         <div class="form-box">
             <!--Create TD block------------------------->
-                <h1 class="A"> Search Account No. </h1>
+            <h1 class="A"> Search Account No. </h1>
+
             <form class = "input-group" method = "POST" >
                 <input type = "number" placeholder="Type the Account No. here..." id = "search" name = "accountno" class = "input-field">
                 <br>
@@ -46,7 +47,10 @@
                     </label>
                 </div>
                 <br>
-                <button type = "submit" class = "btn" name = "search">SEARCH</button>
+                <div class = "buttons">
+                    <button type = "button" class = "reset-btn" name = "reset" onclick = " document.location='Admin_main.php' " > RESET </button>
+                    <button type = "submit" class = "btn" name = "search">SEARCH</button>
+                </div>
             </form>
             
             <!----------------------------------------------->
@@ -453,7 +457,6 @@
                         
                     }
                 }
-                
 
             ?>
 

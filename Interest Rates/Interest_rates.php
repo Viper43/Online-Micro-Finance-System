@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html>
     <head>
         <title> Interest Rates </title>
@@ -8,7 +11,7 @@
 
         <div class="menu_bar">
             <ul>
-                <li><a href="http://localhost/Viper/Login_system/Collector.html"> Home </a></li>
+                <li><a href="http://localhost/Viper/Login_system/Admin_main.php"> Home </a></li>
                <li class="active"><a href="#"> Interest Rates </a></li>
                <li><a href="http://localhost/roll13/oms/login.html"> Logout </a></li>
                <li><a href="#">About Us</a></li>

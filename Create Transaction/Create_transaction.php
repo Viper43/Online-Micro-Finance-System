@@ -1,27 +1,30 @@
 <?php
+    session_start();
+    $account_No = $_SESSION['acccount'];
+    
     $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
                       
-        $sql = "SELECT * FROM transactions WHERE Account_No = '1234567891' AND Status = 'Pending'";
-        $query = $db->query($sql);
+    $sql = "SELECT * FROM transactions WHERE Account_No = '{$account_No}' AND Status = 'Pending'";
+    $query = $db->query($sql);
 
-        $row_Count = $query->rowCount();
-        
-        if ( $row_Count > 0 ) {
-            $rows = $query->fetch();
+    $row_Count = $query->rowCount();
+    
+    if ( $row_Count > 0 ) {
+        $rows = $query->fetch();
 
-            $transaction_Id = $rows['Transaction_Id'];
-            $type = $rows['Type'];
-            $date = $rows['Date'];
-            $amount = $rows['Amount'];
-            $status = $rows['Status'];
+        $transaction_Id = $rows['Transaction_Id'];
+        $type = $rows['Type'];
+        $date = $rows['Date'];
+        $amount = $rows['Amount'];
+        $status = $rows['Status'];
 
-            $flag = false;
-        }
-        else   
-            $flag = true;
-                        
+        $flag = false;
+    }
+    else   
+        $flag = true;
+                    
 ?>
 <html>
     <head>

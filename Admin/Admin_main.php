@@ -1,8 +1,10 @@
+<?php
+    session_start();
+?>
 <html>
     <head>
         <title> Admin Main  </title>
         <link rel = "stylesheet" href = "styles\Admin_main_style.css"/>
-        
     </head>
     <body>
         <div class="menu_bar">

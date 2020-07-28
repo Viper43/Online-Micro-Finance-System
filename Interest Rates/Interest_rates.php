@@ -11,9 +11,9 @@
 
         <div class="menu_bar">
             <ul>
-                <li><a href="../Admin Home/Admin_main.php"> Home </a></li>
+                <li><a href="../Admin/Admin_main.php"> Home </a></li>
                <li class="active"><a href="#"> Interest Rates </a></li>
-               <li><a href="http://localhost/roll13/oms/login.html"> Logout </a></li>
+               <li><a href="../logout_back.php"> Logout </a></li>
                <li><a href="#">About Us</a></li>
              </ul>
         </div>

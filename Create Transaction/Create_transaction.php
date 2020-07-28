@@ -40,13 +40,13 @@
                     <div class="sub_menu">
                         <ul>
                             <li><a href="#">Create</a></li>
-                            <li><a href="../My Transactions/My_transactions.php">View</a></li>
+                            <li><a href="../My Transaction/My_transactions.php">View</a></li>
                         </ul>
                     </div>
                </li>
                <li><a href="#">Term Deposit</a></li>
                <li><a href="#">Loan</a></li>
-               <li><a href="http://localhost/roll13/oms/login.html">Logout</a></li>
+               <li><a href="../logout_back.php">Logout</a></li>
                <li><a href="#">About Us</a></li>
              </ul>
         </div>

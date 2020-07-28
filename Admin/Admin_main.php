@@ -11,7 +11,7 @@
             <ul>
                 <li class="active"><a href="#"> Home </a></li>
                 <li><a href="../Interest Rates/Interest_rates.php"> Interest Rates </a></li>
-                <li><a href="http://localhost/roll13/oms/login.html"> Logout </a></li>
+                <li><a href="../logout_back.php"> Logout </a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
         </div>

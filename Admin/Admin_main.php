@@ -189,7 +189,7 @@
                                     
                                         <?php
                             
-                                            $sql = "SELECT * FROM termdeposits, accounts WHERE termdeposits.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
+                                            $sql = "SELECT * FROM td, accounts WHERE td.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
                                             $query = $db->query($sql);
                                             foreach($db->query($sql) as $rows) {
 
@@ -199,7 +199,7 @@
                                                     <td> <?php echo $rows['Account_No']; ?> </td>
                                                     <td> <?php echo $rows['TD_ID']; ?> </td>
                                                     <td> <?php echo $rows['Tenure']; ?> </td>
-                                                    <td> <?php echo $rows['TD_Amount']; ?> </td>
+                                                    <td> <?php echo $rows['Amount']; ?> </td>
                                                     <td> <?php echo $rows['Creation_Date']; ?> </td>
                                                 </tr>
                                                 <?php
@@ -237,7 +237,7 @@
                                     
                                         <?php
                             
-                                            $sql = "SELECT * FROM loans, accounts WHERE loans.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
+                                            $sql = "SELECT * FROM loan, accounts WHERE loan.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
                                             $query = $db->query($sql);
                                             foreach($db->query($sql) as $rows) {
 
@@ -247,7 +247,7 @@
                                                     <td> <?php echo $rows['Account_No']; ?> </td>
                                                     <td> <?php echo $rows['Loan_Id']; ?> </td>
                                                     <td> <?php echo $rows['Installments']; ?> </td>
-                                                    <td> <?php echo $rows['Loan_Amount']; ?> </td>
+                                                    <td> <?php echo $rows['Amount']; ?> </td>
                                                     <td> <?php echo $rows['Creation_Date']; ?> </td>
                                                 </tr>
                                                 <?php
@@ -383,7 +383,7 @@
                                     
                                         <?php
                             
-                                            $sql = "SELECT * FROM termdeposits ";
+                                            $sql = "SELECT * FROM td ";
                                             $query = $db->query($sql);
                                             foreach($db->query($sql) as $rows) {
 
@@ -393,7 +393,7 @@
                                                     <td> <?php echo $rows['TD_ID']; ?> </td>
                                                     <td> <?php echo $rows['Account_No']; ?> </td>
                                                     <td> <?php echo $rows['Tenure']; ?> </td>
-                                                    <td> <?php echo $rows['TD_Amount']; ?> </td>
+                                                    <td> <?php echo $rows['Amount']; ?> </td>
                                                     <td> <?php echo $rows['Creation_Date']; ?> </td>
                                                 </tr>
                                                 <?php
@@ -431,7 +431,7 @@
                                     
                                         <?php
                             
-                                            $sql = "SELECT * FROM loans ";
+                                            $sql = "SELECT * FROM loan ";
                                             $query = $db->query($sql);
                                             foreach($db->query($sql) as $rows) {
 
@@ -441,7 +441,7 @@
                                                     <td> <?php echo $rows['Loan_Id']; ?> </td>
                                                     <td> <?php echo $rows['Account_No']; ?> </td>
                                                     <td> <?php echo $rows['Installments']; ?> </td>
-                                                    <td> <?php echo $rows['Loan_Amount']; ?> </td>
+                                                    <td> <?php echo $rows['Amount']; ?> </td>
                                                     <td> <?php echo $rows['Creation_Date']; ?> </td>
                                                 </tr>
                                                 <?php

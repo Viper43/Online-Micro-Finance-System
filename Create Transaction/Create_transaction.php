@@ -44,8 +44,8 @@
                         </ul>
                     </div>
                </li>
-               <li><a href="#">Term Deposit</a></li>
-               <li><a href="#">Loan</a></li>
+               <li><a href="../td/td.php">Term Deposit</a></li>
+               <li><a href="../loan/loan.php">Loan</a></li>
                <li><a href="../logout_back.php">Logout</a></li>
                <li><a href="#">About Us</a></li>
              </ul>

@@ -1,6 +1,4 @@
 <?php
-    //$today_day = date("d");
-    //echo $today_day+1;
     $today= date('d/m/Y');
     //echo $today;
     //$today_cd=("+1 days", $today);

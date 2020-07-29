@@ -190,7 +190,9 @@ $row = $sql->fetch();
             </div>
         </div>
     </div>
+
     <!---------------------------------------------->
+    
     <script>
         var check = "<?php echo $count; ?>";
         if(check == 0)

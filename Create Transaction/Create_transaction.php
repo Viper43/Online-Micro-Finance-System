@@ -1,12 +1,12 @@
 <?php
     session_start();
-    $account_No = $_SESSION['acccount'];
+    $account_no = $_SESSION['account'];
     
     $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
                       
-    $sql = "SELECT * FROM transactions WHERE Account_No = '{$account_No}' AND Status = 'Pending'";
+    $sql = "SELECT * FROM transactions WHERE Account_No = '{$account_no}' AND Status = 'Pending'";
     $query = $db->query($sql);
 
     $row_Count = $query->rowCount();
@@ -35,7 +35,7 @@
     <body onload = allowCreation(<?php echo $flag ?>) >
         <div class="menu_bar">
             <ul>
-                <li ><a href="#">Home</a></li>
+                <li ><a href="../main/main.php">Home</a></li>
                <li class="active"><a href="#">Transaction</a>
                     <div class="sub_menu">
                         <ul>

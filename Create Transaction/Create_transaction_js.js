@@ -24,7 +24,6 @@ function enableReceiver(flag) {
 
         document.getElementById("recacc").disabled = true;
         document.getElementById("rec").style.display = 'none';
-        
     }
 }
 function allowCreation(flag) {

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $account_No = $_SESSION['acccount'];
+    $account_no = $_SESSION['acccount'];
     
     $type = $_POST["type"];
     $amount = $_POST["amount"];

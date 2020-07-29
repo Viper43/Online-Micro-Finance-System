@@ -19,5 +19,4 @@ function transactionhistory() {
     document.getElementById("transaction").style.display = 'block';
     document.getElementById("A").style.display = 'block';
     document.getElementById("transferbtn").style.display = 'block';
-    
 }

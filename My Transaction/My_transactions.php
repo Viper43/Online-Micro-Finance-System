@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $account_No = $_SESSION['acccount'];
+    $account_no = $_SESSION['account'];
 
 ?>
 <html>
@@ -11,7 +11,7 @@
     <body>
         <div class="menu_bar">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="../main/main.php">Home</a></li>
                <li class="active"><a href="#">Transaction</a>
                     <div class="sub_menu">
                         <ul>

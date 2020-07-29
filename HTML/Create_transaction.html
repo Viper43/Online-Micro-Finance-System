@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title> Create Transactions  </title>
+        <link rel = "stylesheet" href = "styles\Create_transaction_style.css"/>
+        
+    </head>
+    <body>
+        <div class="menu_bar">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Transaction</a>
+                    <div class="sub_menu">
+                        <ul>
+                            <li><a href="#">Create</a></li>
+                            <li><a href="#">View</a></li>
+                        </ul>
+                    </div>
+               </li>
+               <li><a href="#">Term Deposit</a></li>
+               <li><a href="#">Loan</a></li>
+               <li><a href="http://localhost/roll13/oms/login.html">Logout</a></li>
+               <li><a href="#">About Us</a></li>
+             </ul>
+        </div>
+
+        <div class = "form_box">
+            <div class="image">
+                <div class="text-content">
+                    <h1 style="font-family: Cambria;">Create Transactions</h1>
+                    <p style="font-family: 'Times New Roman';font-size: 15;">You can create your transactions here and see if you are having any pending transactions or not.
+                    If you have any pending transactions you can cancel them any moment to create new transactions</p>
+                </div>
+            </div>
+            
+            
+            <form class = "output_group">
+                <h2>Pending Transaction</h2>    
+                <input type ="number" class = "output_field" placeholder = "Receiver's Account" name = "receiver" required>
+                <input type ="number" class = "output_field" placeholder = "Amount" name = "amount" required class = "validate" >
+                <button type = "button" class = "submit_btn">Cancel</button>
+            </form>
+
+        
+            <form class = "input_group">
+                <h2>Create Transaction</h2>
+                <select class = "dropdown"  id = "type" onchange="enableReceiver()">
+                    <option class = "option" value="Deposit">Deposit</option>
+                    <option class = "option" value="Withdrawal">Withdrawal</option>
+                    <option class = "option" value="Money Transfer">Money Transfer</option>
+                </select>
+                <input type ="number" id = "rec" class = "input_field" placeholder = "Receiver's Account" name = "receiver" required>
+                <input type ="number" class = "input_field" placeholder = "Amount" name = "amount" required>
+                <button type = "submit" class = "submit_btn">Create</button>
+            </form>
+        
+        </div>
+    <script src = "scripts\Create_transaction_js.js"></script>
+    </body>
+</html>

@@ -1,7 +1,6 @@
 <?php
     session_start();
-    $account_no = $_SESSION['acccount'];
-    
+    $account_No = $_SESSION['account'];
     $type = $_POST["type"];
     $amount = $_POST["amount"];
     $date = date('Y/m/d H:i:s');
@@ -15,7 +14,7 @@
             
             $sql = "INSERT INTO transactions(Type, Account_No, Date, Amount, Status)VALUES(?,?,?,?,?)";
 	        $query = $db->prepare($sql);
-            $query->execute([$type, $account_no, $date, $amount, $status]);
+            $query->execute([$type, $account_No, $date, $amount, $status]);
             
             echo "<script type='text/javascript' >
                 alert('Transaction created successfully..............')
@@ -28,7 +27,7 @@
 
             $receiver = $_POST["receiver"];
 
-            $sql = "SELECT * FROM accounts WHERE Account_No = '{$account_no}' ";
+            $sql = "SELECT * FROM accounts WHERE Account_No = '{$account_No}' ";
             $query = $db->query($sql);
             $row = $query->fetch();
 
@@ -44,12 +43,12 @@
 
                 $balanceRec = $rows['Balance'] + $amount;
                 
-                $query = $db->query("UPDATE accounts SET Balance='{$balance}' WHERE Account_No='{$account_no}'");
+                $query = $db->query("UPDATE accounts SET Balance='{$balance}' WHERE Account_No='{$account_No}'");
                 $query = $db->query("UPDATE accounts SET Balance='{$balanceRec}' WHERE Account_No='{$receiver}'");
 
                 $sql = "INSERT INTO transfer(Transferred_To, Transferred_From, Amount, Date)VALUES(?,?,?,?)";
                 $query = $db->prepare($sql);
-                $query->execute([$receiver, $account_no, $amount , $date]);
+                $query->execute([$receiver, $account_No, $amount , $date]);
                 
                 echo "<script type='text/javascript' >
                     alert('Transfer Successful')

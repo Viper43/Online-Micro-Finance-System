@@ -1,20 +1,18 @@
 <?php
     session_start();
-    $account_no = $_SESSION['account'];
-    
+    $account_No = $_SESSION['account'];
     $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
                       
-    $sql = "SELECT * FROM transactions WHERE Account_No = '{$account_no}' AND Status = 'Pending'";
+    $sql = "SELECT * FROM transactions WHERE Account_No = '{$account_No}' AND Status = 'Pending'";
     $query = $db->query($sql);
 
     $row_Count = $query->rowCount();
     
     if ( $row_Count > 0 ) {
         $rows = $query->fetch();
-
-        $transaction_Id = $rows['Transaction_Id'];
+        $transaction_Id = $rows['Transaction_ID'];
         $type = $rows['Type'];
         $date = $rows['Date'];
         $amount = $rows['Amount'];
@@ -23,8 +21,7 @@
         $flag = false;
     }
     else   
-        $flag = true;
-                    
+        $flag = true;             
 ?>
 <html>
     <head>

@@ -5,7 +5,7 @@
 <html>
     <head>
         <title> My Transactions </title>
-        <link rel="stylesheet" href="my_transaction_style.css"/>
+        <link rel="stylesheet" href="styles/my_transaction_style.css"/>
     </head>
     <body>
         <div class="menu_bar">
@@ -122,6 +122,6 @@
 
         <!--.........................script......................-->
         
-        <script src = "My_transaction_js.js"></script>
+        <script src = "scripts/My_transaction_js.js"></script>
     </body>
 </html>

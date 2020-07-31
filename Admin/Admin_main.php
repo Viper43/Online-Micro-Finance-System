@@ -1,10 +1,11 @@
 <?php
+    //starting the session
     session_start();
 ?>
 <html>
     <head>
         <title> Admin Main  </title>
-        <link rel = "stylesheet" href = "Admin_main_style.css"/>
+        <link rel = "stylesheet" href = "styles/Admin_main_style.css"/>
     </head>
     <body>
         <div class="menu_bar">
@@ -17,7 +18,18 @@
         </div>
         
         <div class="form-box">
-            <!--Create TD block------------------------->
+            
+            <!--------------------Display image and text section----------------------->
+            <div class="image">
+                <div class="text-content">
+                    <h1 style="font-family: sans-serif;font-size: 70;">Welcome Admin</h1>
+                    <p style="font-family: 'Times New Roman';font-size: 18;">Here you can view the details of every customers by entering the account number and selecting the details you want to view.
+                    The details are displayed in the details section and you are also provided with a reset button to search all over again.</p>
+                </div>
+            </div>
+
+            <!-------------------Create TD block------------------------->
+            
             <h1 class="A"> Search Account No. </h1>
 
             <form class = "input-group" method = "POST" >
@@ -55,11 +67,11 @@
                 </div>
             </form>
             
-            <!----------------------------------------------->
+            <!---------------------Details----------------------->
             
             <h1 class="B"> Details </h1>
             
-            <!------------------------------------------->
+            <!-------------------Displaying the details--------------------->
 
             <?php
 
@@ -72,11 +84,12 @@
 
                     if ( $account_No != "" ) {
                         
+                        //personal details
                         if ( isset($_POST["personalDetails"]) ) {
                             
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> User Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> User Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">
@@ -121,11 +134,12 @@
                         <?php
                         }
 
+                        //display account
                         if ( isset($_POST["accountDetails"]) ) {
 
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> Account Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> Account Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">
@@ -167,11 +181,12 @@
 
                         }
 
+                        //display term deposits
                         if ( isset($_POST["termDeposits"]) ) {
 
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> Term Deposit Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> Term Deposit Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">
@@ -215,11 +230,12 @@
 
                         }
 
+                        //display loan
                         if ( isset($_POST["loans"]) ) {
 
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> Loan Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> Loan Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">
@@ -264,13 +280,16 @@
                         }
 
                     }
+
+                    //display all section
                     else {
 
+                        //display all users
                         if ( isset($_POST["personalDetails"]) ) {
                             
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> User Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> User Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">
@@ -315,11 +334,12 @@
                         <?php
                         }
 
+                        //display all accounts
                         if ( isset($_POST["accountDetails"]) ) {
 
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> Account Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> Account Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">
@@ -361,11 +381,12 @@
 
                         }
 
+                        //display all term deposits
                         if ( isset($_POST["termDeposits"]) ) {
 
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> Term Deposit Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> Term Deposit Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">
@@ -409,11 +430,12 @@
 
                         }
 
+                        //display all loans
                         if ( isset($_POST["loans"]) ) {
 
                             ?>
 
-                            <h1 style = "font-family: Cambria;font-size: 30;"> Loan Details </h1>
+                            <h1 style = "font-family: sans-serif;font-size: 30;"> Loan Details </h1>
 
                             <div class="table-wrapper" >
                                 <table class="fl-table">

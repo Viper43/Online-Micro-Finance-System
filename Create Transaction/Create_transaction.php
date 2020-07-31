@@ -26,7 +26,7 @@
 <html>
     <head>
         <title> Create Transactions  </title>
-        <link rel = "stylesheet" href = "Create_transaction_style.css"/>
+        <link rel = "stylesheet" href = "styles/Create_transaction_style.css"/>
         
     </head>
     <body onload = allowCreation(<?php echo $flag ?>) >
@@ -132,6 +132,6 @@
             </form>
              
         </div>
-    <script src = "Create_transaction_js.js"></script>
+    <script src = "scripts/Create_transaction_js.js"></script>
     </body>
 </html>

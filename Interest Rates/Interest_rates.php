@@ -27,7 +27,7 @@
                         <tr>
                             <th> INTEREST TYPE </th>
                             <th> RATE (in % ) </th>
-                            <th> TENURE (in months) </th>
+                            <th> TENURE </th>
                             <th> DELETE </th>
                             <th> EDIT </th>
                         </tr>
@@ -87,7 +87,7 @@
                     
                     <br>
                     
-                    <label  class="label-field" id="tenure-label"> Tenure (in months)
+                    <label  class="label-field" id="tenure-label"> Tenure ()
                         <input type="number" id="tenure" class="input-field" name="interestTenure" required >
                     </label> 
 

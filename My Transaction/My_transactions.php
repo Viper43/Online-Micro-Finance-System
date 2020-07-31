@@ -1,7 +1,6 @@
 <?php
     session_start();
     $account_no = $_SESSION['account'];
-
 ?>
 <html>
     <head>
@@ -59,7 +58,7 @@
                             ?>
                                 
                                 <tr>
-                                    <td> <?php echo $rows['Transaction_Id']; ?> </td>
+                                    <td> <?php echo $rows['Transaction_ID']; ?> </td>
                                     <td> <?php echo $rows['Type']; ?> </td>
                                     <td> <?php echo $rows['Account_No']; ?> </td>
                                     <td> <?php echo $rows['Date']; ?> </td>

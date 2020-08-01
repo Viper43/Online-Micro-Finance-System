@@ -16,7 +16,7 @@
 <html>
     <head>
         <title> Interest Rate Editing  </title>
-        <link rel = "stylesheet" href = "interest_rate_style.css"/>
+        <link rel = "stylesheet" href = "styles/interest_rate_style.css"/>
         
     </head>
     <body>

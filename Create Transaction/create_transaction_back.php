@@ -27,6 +27,19 @@
                     $sql = "INSERT INTO transactions(Type, Account_No, Date, Amount, Status)VALUES(?,?,?,?,?)";
                     $query = $db->prepare($sql);
                     $query->execute([$type, $account_No, $date, $amount, $status]);
+
+                    echo "<script type='text/javascript' >
+                    alert('Transaction created successfully.')
+                    document.location='Create_transaction.php'
+                    
+                    </script>";
+                }
+                else {
+                    echo "<script type='text/javascript' >
+                    alert('Insufficient Balance.')
+                    document.location='Create_transaction.php'
+                    
+                    </script>";
                 }
             }
             else {          //deposit
@@ -34,15 +47,14 @@
                 $sql = "INSERT INTO transactions(Type, Account_No, Date, Amount, Status)VALUES(?,?,?,?,?)";
                 $query = $db->prepare($sql);
                 $query->execute([$type, $account_No, $date, $amount, $status]);
-            }
-            
-            //redirecting
-            echo "<script type='text/javascript' >
-                alert('Transaction created successfully..............')
+
+                //redirecting
+                echo "<script type='text/javascript' >
+                alert('Transaction created successfully.')
                 document.location='Create_transaction.php'
                 
                 </script>";
-
+            }
         }
         else {              //money transfer
 
@@ -79,7 +91,7 @@
                 
                 //redit=rection
                 echo "<script type='text/javascript' >
-                    alert('Transfer Successful')
+                    alert('Transfer Successful.')
                     document.location='Create_transaction.php'
             
                     </script>";
@@ -87,7 +99,7 @@
             else {
 
                 echo "<script type='text/javascript' >
-                    alert('Insufficient Balance')
+                    alert('Insufficient Balance.')
                     document.location='Create_transaction.php'
             
                     </script>";

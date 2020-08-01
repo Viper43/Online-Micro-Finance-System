@@ -4,8 +4,8 @@
 <html>
     <head>
         <title> Interest Rates </title>
-        <link rel = "stylesheet" href = "interest_rate_style.css"/>
-        <script src="Interest_rates_script.js"></script>
+        <link rel = "stylesheet" href = "styles/interest_rate_style.css"/>
+        <script src="scripts/Interest_rates_script.js"></script>
     </head>
     <body>
 
@@ -19,6 +19,18 @@
         </div>
 
         <div class = "form-box">
+
+            <!--------------------Display image and text section----------------------->
+            <div class="image">
+                <div class="text-content">
+                    <h1 style="font-family: sans-serif;font-size: 65;"> Interest Rates</h1>
+                    <p style="font-family: 'Times New Roman';font-size: 17;">Here you can view the available interest rates and even add new ones.
+                    The schemes can be deleted or edited also.</p>
+                </div>
+            </div>
+            
+            <!--------------- Table data block --------------->
+
             <h1 class="A" id="A"> Existing Schemes </h1>
             
             <div class="table-wrapper" id="transaction">
@@ -26,7 +38,7 @@
                     <thead>
                         <tr>
                             <th> INTEREST TYPE </th>
-                            <th> RATE (in % ) </th>
+                            <th> RATE (in %) </th>
                             <th> TENURE </th>
                             <th> DELETE </th>
                             <th> EDIT </th>
@@ -40,7 +52,7 @@
                             $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
                             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                            $sql = "SELECT * FROM interests ";
+                            $sql = "SELECT * FROM interests ORDER BY Type";
                             $query = $db->query($sql);
                             foreach($db->query($sql) as $rows) {
                                 
@@ -49,7 +61,12 @@
                                 <tr>
                                     <td> <?php echo $rows['Type']; ?> </td>
                                     <td> <?php echo $rows['Rate']; ?> </td>
-                                    <td> <?php echo $rows['Tenure']; ?> </td>
+                                    <?php if( $rows['Type'] == 'Term Deposit') {?>
+                                        <td> <?php echo $rows['Tenure']; ?> years </td>
+                                    <?php }
+                                    else { ?>
+                                    <td> <?php echo $rows['Tenure']; ?> months </td>
+                                    <?php } ?>
                                     <td> <button class = "del-btn" > <a href = "delete_interest.php?id=<?php echo $rows['ID']; ?>" class = "del-link"> Delete </a> </button> </td>
                                     <td> <button class = "edit-btn" > <a href = "interest_edit.php?id=<?php echo $rows['ID']; ?>" class = "edit-link" > Edit </a> </button> </td>
                                 </tr>
@@ -62,6 +79,8 @@
             </div>
 
             <button type="submit" class="btn-add" onclick="addFields()" > ADD NEW SCHEME </button>
+            
+            <!----------------- Adding new Schemes block ---------------------------->
 
             <h1 class="B" id="B"> Enter New Scheme </h1>
 
@@ -71,7 +90,7 @@
                     
                     <label  class="label-field"> Interest Type
 
-                        <select class = "dropdown"  id = "type" onchange="enableReceiver()" name="interestType" required >
+                        <select class = "dropdown"  id = "type" name="interestType" required >
                             <option class = "option" value="Savings"> Savings </option>
                             <option class = "option" value="Term Deposit"> Term Deposit </option>
                             <option class = "option" value="Loan"> Loan </option>
@@ -87,7 +106,7 @@
                     
                     <br>
                     
-                    <label  class="label-field" id="tenure-label"> Tenure ()
+                    <label  class="label-field" id="tenure-label"> Tenure
                         <input type="number" id="tenure" class="input-field" name="interestTenure" required >
                     </label> 
 
@@ -95,6 +114,8 @@
                 <br>
                 <button type="submit" class="btn-add" > ADD </button>
             </form>
+
+            <p class = "foot-note" style="font-family: 'Times New Roman';font-size: 15;">*Note: Term Deposits are stored in years whereas Loan and other schemes are stored in months</p>
         </div>
     </body>
 </html>

@@ -1,5 +1,8 @@
 <?php
     session_start();            //session picks account number
+
+    require "../common variables/common_var.php";
+
     $account_No = $_SESSION['account'];         
     $type = $_POST["type"];
     $amount = $_POST["amount"];
@@ -22,7 +25,7 @@
                 $balance = $row['Balance'];
 
                 //check minimum balance
-                if ( $balance - $amount > 2000 ) {
+                if ( $balance - $amount > $min_balance ) {
 
                     $sql = "INSERT INTO transactions(Type, Account_No, Date, Amount, Status)VALUES(?,?,?,?,?)";
                     $query = $db->prepare($sql);

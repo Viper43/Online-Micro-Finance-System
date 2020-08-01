@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title> My Transactions </title>
+        <link rel="stylesheet" href="styles\my_transaction_style.css"/>
+    </head>
+    <body>
+        <div class="menu_bar">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Transaction</a>
+                    <div class="sub_menu">
+                        <ul>
+                            <li><a href="#">Create</a></li>
+                            <li><a href="#">View</a></li>
+                        </ul>
+                    </div>
+               </li>
+               <li><a href="#">Term Deposit</a></li>
+               <li><a href="#">Loan</a></li>
+               <li><a href="http://localhost/roll13/oms/login.html">Logout</a></li>
+               <li><a href="#">About Us</a></li>
+             </ul>
+        </div>
+
+        <!--.........................Transaction History......................-->
+        
+        <div class = "form-box">
+            <button type = "submit" class = "btn" id="transferbtn" onclick="moneytransfer()">Money Transfers</button>
+            <h1 class="A" id="A"> Transaction History </h1>
+            
+            <div class="table-wrapper" id="transaction">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>T ID</th>
+                            <th>TYPE</th>
+                            <th>ACCOUNT NO.</th>
+                            <th>DATE</th>
+                            <th>AMOUNT</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A103</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                            <td>Approved</td>
+                        </tr>
+                        <tr>
+                            <td>T3465</td>
+                            <td>Withdrawal</td>
+                            <td>A129</td>
+                            <td>05-04-2020</td>
+                            <td>40000</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>T7865</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>20-09-2018</td>
+                            <td>1000</td>
+                            <td>Approved</td>
+                        </tr>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                            <td>Approved</td>
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
+
+            <!--........................Money Transfer......................-->
+
+            <button type = "submit" class = "btn" id = "transactionbtn" onclick="transactionhistory()">Transaction History</button>
+            <h1 class="B" id="B"> Money Transfers </h1>
+            
+            <div class="table-wrapper" id="money-transfer">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>T ID</th>
+                            <th>TYPE</th>
+                            <th>ACCOUNT NO.</th>
+                            <th>DATE</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A103</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>T3465</td>
+                            <td>Withdrawal</td>
+                            <td>A129</td>
+                            <td>05-04-2020</td>
+                            <td>40000</td>
+                        </tr>
+                        <tr>
+                            <td>T7865</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>20-09-2018</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>T2765</td>
+                            <td>Deposit</td>
+                            <td>A123</td>
+                            <td>25-07-2019</td>
+                            <td>20000</td>
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!--.........................script......................-->
+        
+        <script src = "scripts\My_transaction_js.js"></script>
+    </body>
+</html>

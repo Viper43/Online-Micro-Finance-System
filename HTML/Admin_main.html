@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title> Admin Main  </title>
+        <link rel = "stylesheet" href = "Admin_main_style.css"/>
+        
+    </head>
+    <body>
+        <div class="menu_bar">
+            <div class="logo">
+                
+            </div>
+            
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Interest Rates</a></li>
+               <li><a href="http://localhost/roll13/oms/login.html">Logout</a></li>
+             </ul>
+        </div>
+        
+        <div class="form-box">
+            <!--Create TD block------------------------->
+                <h1 class="A"> Search Account No. </h1>
+            <form class = "input-group">
+                <input type = "number" placeholder="Type the Account No. here..." id = "search" class = "input-field">
+                <br>
+                <div class="check-container">
+                    <label class="checkbox-container">
+                        <input type="checkbox"> 
+                        <span class="checkmark"></span> 
+                        View Personal Details
+                    </label>
+                    <br>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        View Account Details
+                    </label>
+                    <br>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        View term Deposits
+                    </label>
+                    <br>
+                    <label class="checkbox-container"> 
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        View Loans
+                    </label>
+                </div>
+                <br>
+                <button type = "submit" class = "btn">SEARCH</button>
+            </form>
+                
+            <h1 class="B"> Details </h1>
+            
+            <!------------------------------------------->            
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>T ID</th>
+                        <th>TYPE</th>
+                        <th>ACCOUNT NO.</th>
+                        <th>DATE</th>
+                        <th>AMOUNT</th>
+                        <th>STATUS</th>
+                    </tr>
+                    </thead>
+    
+                    <tbody>
+                    <tr>
+                        <td>T2765</td>
+                        <td>Deposit</td>
+                        <td>A103</td>
+                        <td>25-07-2019</td>
+                        <td>20000</td>
+                        <td>Approved</td>
+                    </tr>
+                    <tr>
+                        <td>T3465</td>
+                        <td>Withdrawal</td>
+                        <td>A129</td>
+                        <td>05-04-2020</td>
+                        <td>40000</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>T7865</td>
+                        <td>Deposit</td>
+                        <td>A123</td>
+                        <td>20-09-2018</td>
+                        <td>1000</td>
+                        <td>Approved</td>
+                    </tr>
+                    <tr>
+                        <td>T2765</td>
+                        <td>Deposit</td>
+                        <td>A123</td>
+                        <td>25-07-2019</td>
+                        <td>20000</td>
+                        <td>Approved</td>
+                    </tr>
+                    <tbody>
+                </table>
+            </div>
+            <!---------------------------------------------->
+    
+        </div> 
+    </body>
+</html>

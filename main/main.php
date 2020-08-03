@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Main page</title>
+        <title> Home Page </title>
         <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
         <link rel="stylesheet" href="style_main.css">
         <script src="demo_main.js"></script>
@@ -8,11 +8,11 @@
     <body>
         <div class="menu_bar">
 
-            <!---------- Logo ------------------------------->
-
-            <div class="logo">
-                <img class="icon" src="../images/icon.jpg"/>
-                <label class="logo-label">REPO FINANCES</label>
+            <!---------------- logo ---------------------->
+            
+            <div class = "logo">
+                <img class = "icon" src="../images/icon.jpg">
+                <label class="logo-label"> REPO FINANCES </label>
             </div>
 
             <ul>
@@ -31,6 +31,8 @@
                <li><a href="#">About Us</a></li>
              </ul>
         </div>
+
+
         <div class="outer_form">
             <div class="info_form">
                 <h1 style="color:white; font-family: cambria; font-size: 45; font-weight: normal;">Welcome User!</h1><br>
@@ -41,7 +43,7 @@
                     <?php
                          include("maindetails_back.php");
                     ?>
-                    <img src="../images/avatar.jpg"/>
+                    <img class = "avatar" src="../images/avatar.jpg"/>
                     <br>
                     <div class="name">
                         <label  class="label-field">Account No.</label>

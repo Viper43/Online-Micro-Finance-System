@@ -304,22 +304,21 @@ input::-webkit-outer-spin-button{
 
 .icon {
     width: 20%;
-    height: 88%;
+    height: 80%;
 }
 
 .logo-label {
-    margin-top: 2.5%;
+    margin-top: 3%;
     font-family: Cambria;
-    font-size: 38;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 30;
+    font-weight: 500;
 }
 .logo {
     width: 25%;
-    color: #ffffff;
-    margin-top: 1.5%;
-    letter-spacing: 2px;
+    margin-top: 1.2%;
     margin-left: 1.5%;
-    background-position: center;
-    background-size: 100% 90%;
     display: flex;
 }
 

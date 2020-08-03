@@ -70,7 +70,7 @@
             <div class="tenure">
                 <label for="tenure" class="label-field">Tenure</label>
                     <select name="slct1" class="slct1" id="slct1">
-                      <option selected disabled>---</option>
+                      <option selected disabled hidden>---</option>
                         <?php
 	                    $pdo = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 

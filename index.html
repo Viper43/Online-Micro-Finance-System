@@ -7,14 +7,13 @@
 </head>
 <body>
 	<div class="menu_bar">
-
 		<!---------- Logo ------------------------------->
 
 		<div class="logo">
 			<img class="icon" src="images/icon.jpg"/>
 			<label class="logo-label">REPO FINANCES</label>
 		</div>
-
+		
 		<ul>
 		    <li><a href="#">About Us</a></li>
 		 </ul>
@@ -28,7 +27,7 @@
 		<div class="form">
 			
 			<div id="choice" class="input1">
-				<img src="images/avatar.jpg"/>
+				<img class = "avatar" src="images/avatar.jpg"/>
 				<br><br><br><button type = "button" class="submit-btn" onclick="login()">User</button><br>
 				<h5>----------OR----------</h5>
 				<br><button type = "button" class="submit-btn" onclick="admin_login()">Admin</button>
@@ -58,30 +57,14 @@
 				<input type="text" name="gid" id="govtid" class="input-field" placeholder="Government ID" required>
 				<button type="submit" id="create_btn" class="submit-btn">Create Account</button>
 			</form>
-			
-			<!--div class="button" id="full_button_admin">
-				<div id = "btn1"></div>
-				<button type = "button"  class = "toggle_btn" onclick="admin_login()">Sign In </button>
-				<button type = "button"  class = "toggle_btn" onclick="admin_signup()">Sign Up</button>    
-			</div-->
 
 			<form id="admin_login" method="POST" action="login/signin_back.php" class="input1">
-				<img src="images/avatar.jpg"/>
+				<img class = "avatar" src="images/avatar.jpg"/>
 				<br><br><br>
 				<input type="text" name="username" class="input-field" placeholder="Admin ID" required>
 				<input type="password" name="password" class="input-field" placeholder="Password" required>
 				<button type="submit" class="submit-btn">Sign In</button>	
 			</form>
-			
-			<!--form id="admin_signup" method="POST" action="../php/signup_back.php" class="input">
-				<input type="text" name="name" class="input-field" placeholder="Admin ID" required>
-				<input type="password" name="password" class="input-field" placeholder="Password" required>
-				<select class = "input-field" name="type"  id = "type">
-                    <option class = "option" value="Management">Management</option>
-                    <option class = "option" value="Collector">Collector</option>
-                </select>
-				<button type="submit" class="submit-btn">Sign Up</button>	
-			</form-->
 
 		</div>
 	</div>

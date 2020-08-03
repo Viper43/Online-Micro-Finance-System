@@ -20,7 +20,7 @@ $row = $sql->fetch();
         <title>Loan</title>
 
         <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
-        <link href="styles/style.css?v=<?php echo time(); ?>" rel="stylesheet"> 
+        <link href="styles/style.css" rel="stylesheet"> 
     </head>
 
     <body>
@@ -29,7 +29,7 @@ $row = $sql->fetch();
             <!---------- Logo ------------------------------->
 
             <div class="logo">
-                <img class="icon" src="../images/icon.jpg"/>
+                <img class="nav-icon" src="../images/icon.jpg"/>
                 <label class="logo-label">REPO FINANCES</label>
             </div>
 
@@ -85,7 +85,7 @@ $row = $sql->fetch();
                 <div class="installment">
                     <label for="installment" class="label-field">Installments</label>
                         <select name="slct1" class="slct1" id="slct1">
-                        <option selected disabled>---</option>
+                        <option selected disabled hidden>---</option>
                             <?php
                             $pdo = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 

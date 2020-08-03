@@ -1,52 +1,51 @@
 *{
     padding: 0;
     margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
 }
 body{
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/black1.jpg);
 	background-size: cover;
     background-position: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-}
-.outer_form
-{
-    display: flex;
 }
 
 /*===================== logo ===============================*/
 
 .icon {
     width: 20%;
-    height: 88%;
+    height: 80%;
 }
 
 .logo-label {
-    margin-top: 2.5%;
+    margin-top: 3%;
     font-family: Cambria;
-    font-size: 38;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 30;
+    font-weight: 500;
 }
 .logo {
     width: 25%;
-    color: #ffffff;
-    margin-top: 1.5%;
-    letter-spacing: 2px;
+    margin-top: 1.2%;
     margin-left: 1.5%;
-    background-position: center;
-    background-size: 100% 90%;
+    background-size: 100% 100%;
     display: flex;
 }
 
+.outer_form
+{
+    display: flex;
+}
+
+/*==================Nav bar================================*/
+
 .menu_bar{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background: rgb(0,0,0);
     text-align: right;
     z-index: 3;
-    width: 100%;
 }
 .menu_bar ul{
     display: inline-flex;
@@ -58,19 +57,32 @@ body{
     width: auto;
     margin: 22px;
     padding: 15px;
+    transition: 0.2s;
 }
 .menu_bar ul li a{
     text-decoration: none;
     color: #fff;
+    transition: 0.2s;
 }
+
 .active, .menu_bar ul li:hover{
-    content: '';
    /* background: #2bab0d;*/
+    content: '';
     border-bottom: 4px solid #fff;
+    transition: 0.3s;
 }
+
+.menu_bar ul li:hover{
+    /* background: #2bab0d;*/
+     content: '';
+     border-bottom: 4px solid #fff;
+     transition: 0.3s;
+ }
+
 .sub_menu{
     display: none;
     z-index: 3;
+
 }
 .menu_bar ul li:hover .sub_menu{
     display: block;
@@ -79,10 +91,12 @@ body{
     margin-top: 15px;
     margin-left: -15px;
 }
+
 .menu_bar ul li:hover .sub_menu ul{
     display: block;
     margin: 10px;
 }
+
 .menu_bar ul li:hover .sub_menu ul li{
     width: 150px;
     padding: 10px;
@@ -91,19 +105,21 @@ body{
     border-radius: 0;
     text-align: left;
 }
+
 .menu_bar ul li:hover .sub_menu ul li:last-child{
     border-bottom: none;
 }
+
 .menu_bar ul li:hover .sub_menu ul li :hover
 {
     font-style: italic;
 }
 
+/*================= form box ===========================*/
+
 .info_form
 {
-
 	width : 450px;
-    
     position: relative;
     padding : 5px;
     background: transparent;
@@ -148,19 +164,6 @@ body{
     background-color: #fff;
 }
 .label-field{
-	/*width: 100px;
-	padding: 10px 0;
-    margin-left: 0px;
-    margin-right: 10px;
-	border-left: 0;
-	border-top:  0;
-	border-right: 0;
-	border-bottom: 0;
-	outline: none;
-	text-align: center;
-	background: transparent;
-    background:#fff;
-    color:rgb(0,0,0,);*/
     position: absolute;
     margin: 10px;
     letter-spacing: 3px;
@@ -183,7 +186,7 @@ body{
 }
 
 
-img{
+.avatar{
 	width: 100px;
     margin-top: 0;
     margin-bottom: 20px;

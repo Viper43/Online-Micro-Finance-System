@@ -1,16 +1,26 @@
 <html>
-  <head>
-    <title> Collector </title>
-    <link href="style_collector.css" rel="stylesheet"> 
-  </head>
+    <head>
+        <title> Collector </title>
+        <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
+        <link href="styles/style_collector.css" rel="stylesheet"> 
+    </head>
 
-  <body>
+    <body>
     
-    <div class="menu_bar">
-        <ul>
-            <li><a href="../logout_back.php" class = "link">Logout</a></li>
-        </ul>
-    </div>
+        <div class="menu_bar">
+            <!---------- Logo ------------------------------->
+
+            <div class="logo">
+                <img class="icon" src="../images/icon.jpg"/>
+                <label class="logo-label">REPO FINANCES</label>
+            </div>
+            
+            <ul>
+                <li class="active"><a href="#"> Home </a></li>
+                <li><a href="../logout_back.php"> Logout </a></li>
+            </ul>
+        </div>
+
     <div class="form-box">
         
         <h1 class="A">Search Transaction</h1>

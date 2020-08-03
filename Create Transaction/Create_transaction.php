@@ -26,11 +26,19 @@
 <html>
     <head>
         <title> Create Transactions  </title>
-        <link rel = "stylesheet" href = "styles/Create_transaction_style.css"/>
+            <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
+            <link rel = "stylesheet" href = "styles/Create_transaction_style.css"/>
         
     </head>
     <body onload = allowCreation(<?php echo $flag ?>) >
         <div class="menu_bar">
+
+            <!---------------- logo --------------------------->
+            <div class="logo">
+                <img class="icon" src="../images/icon.jpg"/>
+                <label class="logo-label">REPO FINANCES</label>
+            </div>
+            
             <ul>
                 <li ><a href="../main/main.php">Home</a></li>
                <li class="active"><a href="#">Transaction</a>

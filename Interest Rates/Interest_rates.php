@@ -4,12 +4,21 @@
 <html>
     <head>
         <title> Interest Rates </title>
-        <link rel = "stylesheet" href = "styles/interest_rate_style.css"/>
-        <script src="scripts/Interest_rates_script.js"></script>
+            <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
+            <link rel = "stylesheet" href = "styles/interest_rate_style.css"/>
+            <script src="scripts/Interest_rates_script.js"></script>
     </head>
     <body>
 
         <div class="menu_bar">
+
+            <!---------- Logo ------------------------------->
+
+            <div class="logo">
+                <img class="icon" src="../images/icon.jpg"/>
+                <label class="logo-label">REPO FINANCES</label>
+            </div>
+            
             <ul>
                 <li><a href="../Admin/Admin_main.php"> Home </a></li>
                <li class="active"><a href="#"> Interest Rates </a></li>

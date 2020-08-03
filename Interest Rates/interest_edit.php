@@ -16,24 +16,32 @@
 <html>
     <head>
         <title> Interest Rate Editing  </title>
-        <link rel = "stylesheet" href = "styles/interest_rate_style.css"/>
-        
+            <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
+            <link rel = "stylesheet" href = "styles/interest_rate_style.css"/>
     </head>
     <body>
         <div class="menu_bar">
+
+            <!---------- Logo ------------------------------->
+
+            <div class="logo">
+                <img class="icon" src="../images/icon.jpg"/>
+                <label class="logo-label">REPO FINANCES</label>
+            </div>
+
             <ul>
-                <li><a href="#"> Home </a></li>
-               <li class="active" ><a href="#"> Interest Rates </a></li>
-               <li><a href="http://localhost/roll13/oms/login.html"> Logout </a></li>
+                <li><a href="../Admin/Admin_main.php"> Home </a></li>
+               <li class="active"><a href="#"> Interest Rates </a></li>
+               <li><a href="../logout_back.php"> Logout </a></li>
                <li><a href="#">About Us</a></li>
-             </ul>
+            </ul>
         </div>
 
         <div class = "form-box">
 
             <h1 class="A" id="A"> Edit Rate Scheme </h1>
 
-            <form class = "input-group" method = "POST" action = "edit_interest.php" enctype="multipart/form-data" >
+            <form class = "input-group" method = "POST" action = "edit_interest_back.php" enctype="multipart/form-data" >
                  
                 <div class="container">
 

@@ -5,10 +5,19 @@
 <html>
     <head>
         <title> My Transactions </title>
+        <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
         <link rel="stylesheet" href="styles/my_transaction_style.css"/>
     </head>
     <body>
         <div class="menu_bar">
+
+             <!---------- Logo ------------------------------->
+
+             <div class="logo">
+                <img class="icon" src="../images/icon.jpg"/>
+                <label class="logo-label">REPO FINANCES</label>
+            </div>
+            
             <ul>
                 <li><a href="../main/main.php">Home</a></li>
                <li class="active"><a href="#">Transaction</a>

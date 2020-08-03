@@ -11,13 +11,26 @@ body {
     background-position: center;
     
 }
-.logo {
-    background-image: url(../images/Repo_Finances1.png);
-    width: 22%;
+.icon {
+    width: 20%;
+    height: 88%;
+}
 
-    margin-left: 1%;
+.logo-label {
+    margin-top: 2.5%;
+    font-family: Cambria;
+    font-size: 38;
+}
+.logo {
+    /*background-image: url(../images/Repo_Finances1.png);*/
+    width: 25%;
+    color: #ffffff;
+    margin-top: 1.5%;
+    letter-spacing: 2px;
+    margin-left: 1.5%;
     background-position: center;
     background-size: 100% 90%;
+    display: flex;
 }
 .menu_bar{
     display: flex;

@@ -15,6 +15,14 @@
 
   <body>
     <div class="menu_bar">
+
+         <!---------- Logo ------------------------------->
+
+        <div class="logo">
+            <img class="icon" src="../images/icon.jpg"/>
+            <label class="logo-label">REPO FINANCES</label>
+        </div>
+
             <ul>
                 <li><a href="../main/main.php">Home</a></li>
                <li><a href="#">Transaction</a>
@@ -181,4 +189,4 @@
     <!-------------------------------------------> 
     <script src="scripts/main.js"></script>
     </body>
-  </html>
+</html>

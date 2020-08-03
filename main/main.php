@@ -1,11 +1,20 @@
 <html>
     <head>
         <title>Main page</title>
+        <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
         <link rel="stylesheet" href="style_main.css">
         <script src="demo_main.js"></script>
     </head>
     <body>
         <div class="menu_bar">
+
+            <!---------- Logo ------------------------------->
+
+            <div class="logo">
+                <img class="icon" src="../images/icon.jpg"/>
+                <label class="logo-label">REPO FINANCES</label>
+            </div>
+
             <ul>
                 <li class="active"><a href="#">Home</a></li>
                <li><a href="#">Transaction</a>

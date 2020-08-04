@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title> Login Page Design </title>
+	    <link rel="stylesheet" href="styles\login_style.css"/>
+	    <script src="scripts\login_script.js"></script>
+    </head>
+    <body>
+	    <div class="menu_bar">
+		    <ul>
+		        <li><a href="#">About Us</a></li>
+		    </ul>
+	    </div>
+        
+        <div class="login_page">
+            
+            <div class="info_form">
+			    <h1 style="color:white; font-family: cambria; font-size: 45; font-weight: normal;">Online Microfinance System</h1><br>
+			    <p style="color:rgb(100,100,100); font-family: cambria; font-size: 20; font-weight: normal;">Its a financial platform to provide the poor with access to financial services as well as an opportunity for them to build their financial capacity and ability to grow to financial self-sufficiency</p><br>
+		    </div>
+		
+		    <div class="form">
+			
+			    <form id="choice" class="input1">
+				    <img src="avatar.jpg"/>
+				    <br><br><br><button type = "button" class="submit-btn" onclick="login()">User</button><br>
+                    <h5>----------OR----------</h5>
+                    <br><button type = "button" class="submit-btn" onclick="admin_login()">Admin</button>
+                </form>
+                
+                <div class="button" id="full_button">
+                    <div id = "btn"></div>
+                    <button type = "button"  class = "toggle_btn" onclick="login()" >Login</button>
+                    <button type = "button"  class = "toggle_btn" onclick="register()">Register</button>  
+                </div>
+                
+                <!--form id="login" class="input">
+                    <input type="email" class="input-field" placeholder="Email" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>	
+                
+                <form id="register"class="input">
+                    <input type="text" id="u_name" class="input-field" placeholder="Username" required>
+                    <input type="email" id="mail" class="input-field" placeholder="Email" required>
+                    <input type="password" id="pass" class="input-field" placeholder="Password" required>
+                    <br><br><br>
+                    <button type = "button" id="register_btn" class="submit-btn" onclick="create_account()">Register</button>	
+                    <input type="text" id="address" class="input-field" placeholder="Address" required>
+                    <input type="number" id="phone" class="input-field" placeholder="Phone no." required>
+                    <input type="text" id="dob" class="input-field" placeholder="Date of Birth" onfocus="(this.type='Date')" required>
+                    <input type="text" id="govtid" class="input-field" placeholder="Government ID" required>
+                    <button type="submit" id="create_btn" class="submit-btn">Create Account</button>
+                </form-->
+                
+                
+                <div class="admin-button" id="full_button_admin">
+                    <div id = "btn"></div>
+                    <button type = "button"  class = "toggle_btn" onclick="login()" >SignIn</button>
+                    <button type = "button"  class = "toggle_btn" onclick="register()">SignUp</button>    
+                </div>
+
+                <!--form id="admin_login" class="input">
+                    <input type="text" class="input-field" placeholder="Admin ID" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Login</button>	
+                </form>
+                
+                <form id="admin_signup" class="input">
+                    <input type="text" class="input-field" placeholder="Admin ID" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Login</button>	
+                </form-->
+
+            </div>
+	    </div>
+    </body>
+</html>

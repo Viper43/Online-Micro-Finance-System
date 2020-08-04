@@ -1,6 +1,9 @@
 <?php
     session_start();
     $account_no = $_SESSION['account'];
+
+    include "../connection.php";
+    
 ?>
 <html>
     <head>
@@ -57,8 +60,6 @@
                     <tbody>
                         
                         <?php
-                            $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-                            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                             $sql = "SELECT * FROM transactions WHERE Account_No = '{$account_no}' ";
                             $query = $db->query($sql);
@@ -102,8 +103,6 @@
                     <tbody>
                     
                         <?php
-                            $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-                            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                             $sql = "SELECT * FROM transfer WHERE Transferred_To = '{$account_no}' OR Transferred_From = '{$account_no}' ";
                             $query = $db->query($sql);

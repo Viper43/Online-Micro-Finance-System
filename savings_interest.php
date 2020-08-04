@@ -1,9 +1,8 @@
 <?php
 
-	require "common variables/common_var.php";
+	include "connection.php";
 
-	$db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	require "common variables/common_var.php";
 
 
 	$currentDate = date('Y-m-d');

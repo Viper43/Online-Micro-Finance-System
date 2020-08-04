@@ -1,10 +1,12 @@
 <?php
     //starting the session
     session_start();
+
+    include "../connection.php";
 ?>
 <html>
     <head>
-        <title> Admin Main  </title>
+        <title> Admin Page </title>
         <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
         <link rel = "stylesheet" href = "styles/Admin_main_style.css"/>
     </head>
@@ -84,9 +86,6 @@
             <?php
 
                 if ( isset($_POST["search"]) ) {
-                    
-                    $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-                    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $account_No = $_POST["accountno"];
 

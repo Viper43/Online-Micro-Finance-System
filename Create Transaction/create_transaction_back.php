@@ -9,8 +9,8 @@
     $date = date('Y/m/d H:i:s');
     $status = "Pending";
 
-    $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include "../connection.php";
+    
     try {
 
         if ( empty($_POST["receiver"]) ) {

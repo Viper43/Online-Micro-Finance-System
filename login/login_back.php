@@ -1,9 +1,10 @@
 <?php
     session_start();
     $a= $_POST["email"];
-	$b= $_POST["password"];
-    $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $b= $_POST["password"];
+    
+    include "../connection.php";
+    
     try 
     {
         $query = $db->query("SELECT * FROM users WHERE Email = '{$a}' AND Password = '{$b}'");

@@ -4,8 +4,9 @@
     $phone = $_POST["phone"];
     $govtId = $_POST["gid"];
     $pass = $_POST["password"];
-    $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    include "../connection.php";
+    
         try 
         { 
             $query = $db->query("UPDATE users SET Address='{$address}' , Phone_No='{$phone}' , Govt_ID='{$govtId}' , Password='{$pass}' WHERE Email='{$email}'");

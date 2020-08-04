@@ -2,8 +2,9 @@
     $type = $_POST["interestType"];
     $rate = $_POST["interestRate"];
     $tenure = $_POST["interestTenure"];
-    $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    include "../connection.php";
+
     try {
         $sql = "INSERT INTO interests(Type, Rate, Tenure)VALUES(?,?,?)";
 	    $query = $db->prepare($sql);

@@ -7,8 +7,9 @@
 	$f= $_POST["dob"];
 	$g= $_POST["gid"];
 	$h= date('Y/m/d H:i:s');
-	$db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+	include "../connection.php";
+	
 		try
 		{
 			$sql = $db->query("SELECT * FROM users WHERE Email='{$b}'");

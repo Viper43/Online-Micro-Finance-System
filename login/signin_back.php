@@ -2,8 +2,8 @@
     $a= $_POST["username"];
 	$b= $_POST["password"];
 
-        $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include "../connection.php";
+    
         try 
         {
             $query = $db->query("SELECT * FROM admin WHERE Admin_ID = '{$a}' AND Password = '{$b}'");

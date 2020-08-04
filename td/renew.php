@@ -9,8 +9,7 @@ $id = $_GET['id'];
 $status = "Successful";
 $type = "Term Deposit Amount";
 
-$db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+include "../connection.php";
 
 try
 {	

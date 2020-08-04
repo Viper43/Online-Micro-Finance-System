@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-$db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+include "../connection.php";
 
 $sql=$db->prepare("SELECT * FROM loan WHERE Account_No= '".$_SESSION["account"]."'");
 
@@ -87,11 +86,10 @@ $row = $sql->fetch();
                         <select name="slct1" class="slct1" id="slct1">
                         <option selected disabled hidden>---</option>
                             <?php
-                            $pdo = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 
                             $sql="SELECT Tenure FROM interests WHERE Type='Loan'";
-                            $query=$pdo->query($sql);
-                            foreach ($pdo->query($sql) as $row)//Array or records stored in $row
+                            $query=$db->query($sql);
+                            foreach ($db->query($sql) as $row)//Array or records stored in $row
                             {
                             echo "<option value=$row[Tenure]>$row[Tenure]</option>"; 
                             }
@@ -181,11 +179,11 @@ $row = $sql->fetch();
                                 <select name="installment2" id="installment2">
                                 <option selected disabled>---</option>
                                 <?php
-                                    $pdo = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
+                                    $db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 
                                     $sql="SELECT Tenure,Rate FROM interests WHERE Type='Loan'";
-                                    $query=$pdo->query($sql);
-                                    foreach ($pdo->query($sql) as $row)//Array or records stored in $row
+                                    $query=$db->query($sql);
+                                    foreach ($db->query($sql) as $row)//Array or records stored in $row
                                     {
                                         echo "<option value=$row[Tenure]>$row[Tenure]</option>"; 
                                     }

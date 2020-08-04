@@ -72,11 +72,11 @@
                     <select name="slct1" class="slct1" id="slct1">
                       <option selected disabled hidden>---</option>
                         <?php
-	                    $pdo = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
+	                    $db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 
                         $sql="SELECT Tenure FROM interests WHERE Type='Term Deposit'";
-                        $query=$pdo->query($sql);
-	                    foreach ($pdo->query($sql) as $row)//Array or records stored in $row
+                        $query=$db->query($sql);
+	                    foreach ($db->query($sql) as $row)//Array or records stored in $row
 		                {
 			                echo "<option value=$row[Tenure]>$row[Tenure] Year(s)</option>"; 
 		                }
@@ -115,11 +115,12 @@
 
                 <tbody>
                 <?php 
-					$pdo = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
+                
+					include "../connection.php";
 
 					$sql="SELECT * FROM td WHERE Account_No= '".$_SESSION["account"]."'";
-					$query=$pdo->query($sql);
-					foreach($pdo->query($sql) as $row){
+					$query=$db->query($sql);
+					foreach($db->query($sql) as $row){
                         $exp = date('Y-m-d', strtotime($row['Creation_Date']. "+ {$row['Tenure']} years")); //Get expiration date
                         $lower = date('Y-m-d', strtotime($row['Creation_Date']. "+6 months"))               //Set TD locking period
 						?>
@@ -169,11 +170,11 @@
 
                 <tbody>
                 <?php 
-					$pdo = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
+					$db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 
 					$sql="SELECT Tenure,Rate FROM interests WHERE type='Term Deposit'";
-					$query=$pdo->query($sql);
-					foreach($pdo->query($sql) as $row){
+					$query=$db->query($sql);
+					foreach($db->query($sql) as $row){
 						?>
 						<tr>
                             <td> <?php echo $row['Tenure']; ?></td>

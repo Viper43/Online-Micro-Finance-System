@@ -3,8 +3,9 @@
     $accountno = $_POST["accountno"];
     $type = $_POST["type"];
     $amount = $_POST["amount"];
-    $db = new PDO("mysql:host=localhost;dbname=mfs","root","");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    include "../connection.php";
+    
         try 
         { 
             $query = $db->query("SELECT * FROM accounts WHERE Account_No='{$accountno}'");

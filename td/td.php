@@ -1,5 +1,7 @@
 <?php session_start();
     $date = date('Y-m-d');
+
+    include "../connection.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,7 +74,6 @@
                     <select name="slct1" class="slct1" id="slct1">
                       <option selected disabled hidden>---</option>
                         <?php
-	                    $db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 
                         $sql="SELECT Tenure FROM interests WHERE Type='Term Deposit'";
                         $query=$db->query($sql);
@@ -114,9 +115,7 @@
                 </thead>
 
                 <tbody>
-                <?php 
-                
-					include "../connection.php";
+                <?php
 
 					$sql="SELECT * FROM td WHERE Account_No= '".$_SESSION["account"]."'";
 					$query=$db->query($sql);
@@ -169,8 +168,7 @@
                 </thead>
 
                 <tbody>
-                <?php 
-					$db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
+                <?php
 
 					$sql="SELECT Tenure,Rate FROM interests WHERE type='Term Deposit'";
 					$query=$db->query($sql);

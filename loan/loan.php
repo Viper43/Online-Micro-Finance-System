@@ -179,7 +179,6 @@ $row = $sql->fetch();
                                 <select name="installment2" id="installment2">
                                 <option selected disabled>---</option>
                                 <?php
-                                    $db = new PDO('mysql:host=localhost;dbname=mfs', 'root', '');
 
                                     $sql="SELECT Tenure,Rate FROM interests WHERE Type='Loan'";
                                     $query=$db->query($sql);

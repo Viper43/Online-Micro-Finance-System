@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Login Page Design</title>
+<title>Login Page </title>
 	<link rel = "icon" href = "images/logo.png" type = "image/x-icon">
 	<link rel="stylesheet" href="login/style_login.css"/>
 	<script src="login/demo_login.js"></script>

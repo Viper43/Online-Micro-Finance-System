@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include "../connection.php";
+
 require "../common variables/common_var.php";				//Get minimum balance
 
 $td_amount = $_GET["amount"];
@@ -9,8 +11,6 @@ $date = date('Y-m-d');
 
 $status = "Successful";						//Set variables for the transaction
 $type = "Term Deposit Amount";
-
-include "../connection.php";
 
 try
 {

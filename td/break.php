@@ -1,6 +1,8 @@
 <?php 
 session_start();
 
+include "../connection.php";
+
 function dateDiff ($d1, $d2) {
 	// Return the number of days between the two dates:    
 		return round(abs(strtotime($d1) - strtotime($d2))/86400);
@@ -12,7 +14,7 @@ $date = date('Y-m-d');
 $status = "Successful";
 $type = "Term Deposit Amount";
 
-include "../connection.php";
+
 
 try
 {

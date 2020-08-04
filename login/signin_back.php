@@ -30,6 +30,7 @@
                     echo "<script type='text/javascript' >
                     document.location='../Admin/Admin_main.php'
                     </script>";
+                    
                 }
             }
         }

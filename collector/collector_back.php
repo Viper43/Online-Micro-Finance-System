@@ -1,10 +1,12 @@
 <?php
+
+    include "../connection.php";
+
     $trno = $_POST["tno"];
     $accountno = $_POST["accountno"];
     $type = $_POST["type"];
     $amount = $_POST["amount"];
 
-    include "../connection.php";
     
         try 
         { 

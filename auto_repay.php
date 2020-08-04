@@ -1,9 +1,10 @@
 <?php
+        
+        include "connection.php";
+        
         $date = date('Y-m-d');
         $status = "Successful";						//Set variables for the transaction
         $type = "Loan Installment";
-        
-        include "connection.php";
 
         $querySql = $db->query("SELECT * FROM interests WHERE Type = 'Loan' LIMIT 1");      //Get interest rate
         $row = $querySql->fetch();

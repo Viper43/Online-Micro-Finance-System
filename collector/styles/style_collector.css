@@ -34,6 +34,32 @@ body{
     display: flex;
 }
 
+/*=================== Image ========================*/
+
+.image {
+    background-image: url(../images/collector.jpg);
+    display: block;
+    margin: auto;
+
+    width: 100%;
+    display: flex;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+/*============================ Text in image ==================*/
+
+.text-content {
+    margin-left: 45%;
+    margin-top: 15%;
+    margin-bottom: 0;
+    width: 70%;
+    letter-spacing: 1px;
+    padding: 5% 5% 3% 10%;
+    color: white;
+    text-align: left;
+}
+
 /*-------------------------------------------------*/
 /* Add a box container for all body elements */
 .form-box {
@@ -252,4 +278,3 @@ input::-webkit-outer-spin-button{
 {
     font-style: italic;
 }
-

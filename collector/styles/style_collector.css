@@ -50,14 +50,15 @@ body{
 /*============================ Text in image ==================*/
 
 .text-content {
-    margin-left: 45%;
+    margin-left: 35%;
     margin-top: 15%;
-    margin-bottom: 0;
+    margin-bottom: 2%;
+    margin-right: 1%;
     width: 70%;
     letter-spacing: 1px;
     padding: 5% 5% 3% 10%;
     color: white;
-    text-align: left;
+    text-align: right;
 }
 
 /*-------------------------------------------------*/

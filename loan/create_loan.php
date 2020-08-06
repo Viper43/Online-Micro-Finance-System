@@ -11,7 +11,7 @@ $date = date('Y-m-d');
 $status = "Successful";						//Set variables for the transaction
 $type = "Loan Amount";
 
-include "../connection.php";
+require "../connection.php";
 
 try
 {	
@@ -19,7 +19,15 @@ try
 	$sql = $db->query("SELECT Balance FROM accounts where Account_No= '".$_SESSION["account"]."'");
 	$row = $sql->fetch();
 
-	if($row['Balance'] < $min_balance)								//If minimum balance is not maintained, alert so
+	if($loan_amount < $min_loan_amount)									//Check if loan is requested for amount lower than permissible
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Loan for amount less than ₹10000 is not allowed.");'; 
+		echo 'window.location.href = "td.php";';
+		echo '</script>';
+		
+	}
+	elseif($row['Balance'] < $min_balance)								//If minimum balance is not maintained, alert so
 	{
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Minimum Balance not maintained.");'; 

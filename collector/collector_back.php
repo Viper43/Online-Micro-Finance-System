@@ -1,6 +1,6 @@
 <?php
 
-    include "../connection.php";
+    require "../connection.php";
     echo "hello";
     $trno = $_POST["tno"];
     $accountno = $_POST["accountno"];

@@ -8,7 +8,7 @@
 	$g= $_POST["gid"];
 	$h= date('Y/m/d H:i:s');
 
-	include "../connection.php";
+	require "../connection.php";
 	
 		try
 		{

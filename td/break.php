@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-include "../connection.php";
+require "../connection.php";
 
 function dateDiff ($d1, $d2) {
 	// Return the number of days between the two dates:    

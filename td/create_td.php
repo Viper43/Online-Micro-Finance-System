@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "../connection.php";
+require "../connection.php";
 
 require "../common variables/common_var.php";				//Get minimum balance
 
@@ -17,7 +17,15 @@ try
 	$sql = $db->query("SELECT Balance FROM accounts where Account_No= '".$_SESSION["account"]."'");
 	$row = $sql->fetch();
 	
-	if($row['Balance'] < $min_balance)
+	if($td_amount < $min_td_amount)									//Check if TD is requested for amount lower than permissible
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Term Deposit lower than ₹5000 is not allowed.");'; 
+		echo 'window.location.href = "td.php";';
+		echo '</script>';
+		
+	}
+	elseif($row['Balance'] < $min_balance)								//If minimum balance is not maintained, alert so
 	{
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Minimum Balance not maintained.");'; 
@@ -25,14 +33,14 @@ try
 		echo '</script>';
 		
 	}
-	elseif($row['Balance'] < $td_amount)
+	elseif($row['Balance'] < $td_amount)								// Check if current balance is insufficient for opening the TD
 	{
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Insufficient balance");'; 
 		echo 'window.location.href = "td.php";';
 		echo '</script>';
 	}
-	else
+	else															//Open TD
 	{
 		//Add new term deposit to TD table
 		$queryStr = "INSERT INTO td(Account_No,Amount,Tenure,Creation_Date) VALUES(?,?,?,?)";

@@ -1,5 +1,7 @@
 <?php
     session_start();
+
+    require "../connection.php";
 ?>
 <html>
     <head>
@@ -57,8 +59,6 @@
                     <tbody>
                         
                         <?php
-                        
-                            include "../connection.php";
 
                             $sql = "SELECT * FROM interests ORDER BY Type";
                             $query = $db->query($sql);
@@ -109,21 +109,23 @@
                     <br>
                     
                     <label  class="label-field"> Rate
-                        <input type="number" step = "0.01" id="rate" class="input-field" name="interestRate" required >
+                        <input type="number" step = "0.01" id="rate" class="input-field" min = "1" name="interestRate" required >
                     </label>
                     
                     <br>
                     
                     <label  class="label-field" id="tenure-label"> Tenure
-                        <input type="number" id="tenure" class="input-field" name="interestTenure" required >
+                        <input type="number" id="tenure" class="input-field" min = "1" name="interestTenure" required >
                     </label> 
 
                 </div>
                 <br>
                 <button type="submit" class="btn-add" > ADD </button>
+
+                <p class = "foot-note">*Note: Term Deposit tenures are stored in years whereas Loan and other tenures are stored in months</p>
             </form>
 
-            <p class = "foot-note" style="font-family: 'Times New Roman';font-size: 15;">*Note: Term Deposits are stored in years whereas Loan and other schemes are stored in months</p>
+            
         </div>
     </body>
 </html>

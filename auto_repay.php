@@ -1,6 +1,6 @@
 <?php
         
-        include "connection.php";
+        require "connection.php";
         
         $date = date('Y-m-d');
         $status = "Successful";						//Set variables for the transaction

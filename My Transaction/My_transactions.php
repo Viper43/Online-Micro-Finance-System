@@ -1,8 +1,10 @@
 <?php
     session_start();
+    require "../check_login.php";
+
     $account_no = $_SESSION['account'];
 
-    include "../connection.php";
+    require "../connection.php";
     
 ?>
 <html>

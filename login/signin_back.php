@@ -2,7 +2,7 @@
     $a= $_POST["username"];
 	$b= $_POST["password"];
 
-    include "../connection.php";
+    require "../connection.php";
     
         try 
         {

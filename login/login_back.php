@@ -3,7 +3,7 @@
     $a= $_POST["email"];
     $b= $_POST["password"];
     
-    include "../connection.php";
+    require "../connection.php";
     
     try 
     {

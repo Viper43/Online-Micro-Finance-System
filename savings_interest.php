@@ -1,6 +1,6 @@
 <?php
 
-	include "connection.php";
+	require "connection.php";
 
 	require "common variables/common_var.php";
 

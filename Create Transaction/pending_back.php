@@ -1,7 +1,7 @@
 <?php
     $transaction_Id = $_POST["transaction_id"];
 
-    include "../connection.php";
+    require "../connection.php";
     
     try {
                             

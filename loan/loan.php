@@ -1,7 +1,9 @@
 <?php
 session_start();
+require "../check_login.php";
 
-include "../connection.php";
+require "../common variables/common_var.php";
+require "../connection.php";
 
 $sql=$db->prepare("SELECT * FROM loan WHERE Account_No= '".$_SESSION["account"]."'");
 
@@ -79,7 +81,7 @@ $row = $sql->fetch();
                 </div>
                 <div class="ann">
                     <label for="ann" class="label-field">Annual Income</label>
-                    <input type="number" class="input-field" name="ann" id="ann" placeholder="₹"> 
+                    <input type="number" class="input-field" name="ann" id="ann" placeholder="₹" >
                 </div>
                 <div class="installment">
                     <label for="installment" class="label-field">Installments</label>

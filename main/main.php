@@ -41,7 +41,7 @@
             <div class="edit_page">
                 <form action="main_back.php" method="POST" class="input">
                     <?php
-                         include("maindetails_back.php");
+                         require("maindetails_back.php");
                     ?>
                     <img class = "avatar" src="../images/avatar.jpg"/>
                     <br>

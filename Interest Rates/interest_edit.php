@@ -1,7 +1,7 @@
 <?php
     $id = $_GET['id'];
 
-    include "../connection.php";    
+    require "../connection.php";    
                       
     $sql = "SELECT * FROM interests WHERE Id = '{$id}' ";
     $query = $db->query($sql);
@@ -55,13 +55,13 @@
                     <br>
                         
                     <label  class="label-field" > RATE
-                        <input type="number" step = "0.01" class="input-field" name="interestRate" value = "<?php echo $rate ?>"  >
+                        <input type="number" step = "0.01" class="input-field" min = "1" name="interestRate" value = "<?php echo $rate ?>"  >
                     </label>
                     
                     <br>
 
                     <label  class="label-field"> TENURE
-                        <input type ="number" class = "input-field" name = "interestTenure" value = "<?php echo $tenure ?>"  >
+                        <input type ="number" class = "input-field" min = "1" name = "interestTenure" value = "<?php echo $tenure ?>"  >
                     </label>
 
                 </div>
@@ -70,6 +70,7 @@
                     
                 <button type="submit" class="btn-add" > SAVE </button>
                 
+                <p class = "foot-note">*Note: Term Deposit tenures are stored in years whereas Loan and other tenures are stored in months</p>
             </form>
 
     

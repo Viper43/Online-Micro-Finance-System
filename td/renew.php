@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "../connection.php";
+require "../connection.php";
 
 require "../common variables/common_var.php";				//Get minimum balance
 

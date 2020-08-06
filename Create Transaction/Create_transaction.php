@@ -1,9 +1,11 @@
 <?php
     session_start();
+    require "../check_login.php";
+
     $account_No = $_SESSION['account'];
     
-    include "../connection.php";
-    
+    require "../common variables/common_var.php";
+    require "../connection.php";
                       
     $sql = "SELECT * FROM transactions WHERE Account_No = '{$account_No}' AND Status = 'Pending'";
     $query = $db->query($sql);
@@ -125,13 +127,13 @@
                     <br>
                     
                     <label  class="label-field" id = "rec"> RECEIVER
-                        <input type ="number" id = "recacc" class = "input-field" name = "receiver" disabled required>
+                        <input type ="number" id = "recacc" class = "input-field" name = "receiver" placeholder = "Receiver's Account Number"  disabled required>
                         <br>
                     </label>
                     
                     
                     <label  class="label-field" id="tenure-label"> AMOUNT
-                        <input type ="number" class = "input-field" name = "amount" placeholder = "₹" required>
+                        <input type ="number" class = "input-field" min = "<?php echo $min_withdrawal ?>" name = "amount" placeholder = "₹" required>
                     </label>
 
                 </div>

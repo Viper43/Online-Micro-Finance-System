@@ -1,6 +1,6 @@
 <?php
 
-include "connection.php";
+require "connection.php";
 
     $currentDate = date('Y-m-d');
 

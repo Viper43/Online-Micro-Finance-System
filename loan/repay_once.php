@@ -11,7 +11,7 @@
         $status = "Successful";						//Set variables for the transaction
         $type = "Loan Amount";
 
-        include "../connection.php";
+        require "../connection.php";
 
     try{
             $querySql = $db->query("SELECT * FROM interests WHERE Type = 'Loan' LIMIT 1");          //Get interest rate

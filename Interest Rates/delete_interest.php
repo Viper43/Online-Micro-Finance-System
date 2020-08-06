@@ -1,7 +1,7 @@
 <?php
     $id = $_GET['id'];
     
-    include "../connection.php";
+    require "../connection.php";
     
     try {
                             

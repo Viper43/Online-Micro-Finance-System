@@ -1,6 +1,6 @@
 <?php
     $today= date('d/m/Y');
-    include "connection.php";
+    require "connection.php";
         try 
         {
             $query = $db->query("SELECT * FROM td");

@@ -42,7 +42,7 @@
         {
             $tno = $_POST["trno"];
         
-            include "../connection.php";
+            require "../connection.php";
             try 
             {
                 $query = $db->query("SELECT * FROM transactions WHERE Transaction_ID='{$tno}' AND status='Pending'");

@@ -1,8 +1,9 @@
 <?php
         session_start();
+        require "../check_login.php";
         $a=$_SESSION['account'];
 
-        include "../connection.php";
+        require "../connection.php";
         
         try 
         {

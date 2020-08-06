@@ -5,7 +5,7 @@
     $govtId = $_POST["gid"];
     $pass = $_POST["password"];
 
-    include "../connection.php";
+    require "../connection.php";
     
         try 
         { 

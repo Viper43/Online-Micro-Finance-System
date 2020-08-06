@@ -1,5 +1,5 @@
 <?php
-    include "connection.php";
+    require "connection.php";
     
 
     $querySql = $db->query("SELECT * FROM interests WHERE Type = 'Loan' ");

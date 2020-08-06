@@ -1,7 +1,11 @@
-<?php session_start();
+<?php 
+    session_start();
+    require "../check_login.php";
+
     $date = date('Y-m-d');
 
-    include "../connection.php";
+    require "../common variables/common_var.php";
+    require "../connection.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,7 +71,7 @@
         <div class="flex-container2">
             <div class="amount">
                 <label for="amount" class="label-field">Amount</label>
-                <input type="number" class="input-field" name="amount" id="amount" placeholder="₹"> 
+                <input type="number" class="input-field" min = "<?php echo $min_td_amount ?>" name="amount" id="amount" placeholder="₹"> 
             </div>
             <div class="tenure">
                 <label for="tenure" class="label-field">Tenure</label>

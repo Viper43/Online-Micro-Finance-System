@@ -2,7 +2,7 @@
     //starting the session
     session_start();
 
-    include "../connection.php";
+    require "../connection.php";
 ?>
 <html>
     <head>
@@ -286,6 +286,16 @@
 
                         }
 
+                        if ( empty($_POST["personalDetails"]) && empty($_POST["accountDetails"]) && empty($_POST["termDeposits"]) && empty($_POST["loans"]) ) {
+
+                            echo "<script type='text/javascript' >
+                                alert('Checkbox not selected. Please select the required checkboxes to view the detalis' )
+                                document.location='Admin_main.php'
+                
+                            </script>";
+
+                        }
+
                     }
 
                     //display all section
@@ -299,7 +309,7 @@
                             <h1 style = "font-family: sans-serif;font-size: 30;"> User Details </h1>
 
                             <div class="table-wrapper" >
-                                <table class="fl-table">
+                                 <table class="fl-table">
                                     <thead>
                                         <tr>
                                             <th> NAME </th>

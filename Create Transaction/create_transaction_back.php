@@ -9,7 +9,7 @@
     $date = date('Y/m/d H:i:s');
     $status = "Pending";
 
-    include "../connection.php";
+    require "../connection.php";
     
     try {
 

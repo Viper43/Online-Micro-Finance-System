@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $a= $_POST["username"];
 	$b= $_POST["password"];
 
@@ -39,4 +40,5 @@
 		    echo $e->getMessage();
 	    }
     
+    $_SESSION['account'] = $a;
 ?>

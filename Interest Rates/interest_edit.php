@@ -1,4 +1,7 @@
 <?php
+    session_start();
+    require "../check_login.php";
+    
     $id = $_GET['id'];
 
     require "../connection.php";    

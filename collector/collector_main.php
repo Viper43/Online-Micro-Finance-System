@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+    require "../check_login.php";
+
+?>
 <html>
     <head>
         <title> Collector </title>

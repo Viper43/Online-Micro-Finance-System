@@ -1,6 +1,7 @@
 <?php
     session_start();
-
+    require "../check_login.php";
+    
     require "../connection.php";
 ?>
 <html>

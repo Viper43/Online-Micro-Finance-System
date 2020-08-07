@@ -31,8 +31,8 @@
 
         <div class="image">
             <div class="text-content">
-                <h1 style="font-family: sans-serif;font-size: 60;">Welcome Collector</h1>
-                <p style="font-family: 'Times New Roman';font-size: 18;">Here you can view the details of the deposit and withdrawal transactions of the customers and approve them.
+                <h1 style="font-family: sans-serif;font-size: 63;">Welcome Collector</h1>
+                <p style="font-family: 'Times New Roman';font-size: 17;">Here you can view the details of the deposit and withdrawal transactions of the customers and approve them.
                 Customer will provide you with the transaction Id that needs to be approved.</p>
             </div>
         </div>

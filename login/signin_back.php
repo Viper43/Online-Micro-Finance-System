@@ -23,7 +23,7 @@
                 if($type == 'Collector')
                 {
                     echo "<script type='text/javascript' >
-                    document.location='../collector/collector.php'
+                    document.location='../collector/collector_main.php'
                     </script>";
                 }
                 if($type == 'Management')

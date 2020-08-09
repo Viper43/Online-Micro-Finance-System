@@ -4,11 +4,10 @@
 
 	require "common variables/common_var.php";
 
-
 	$currentDate = date('Y-m-d');
 	$day = date('d');
 
-	if( $day == $savingsinterest_date ) {
+	if( $day == $savings_interest_date ) {
 
 		$querySql = $db->query("SELECT * FROM interests WHERE Type = 'Savings' ");
 		$row = $querySql->fetch();

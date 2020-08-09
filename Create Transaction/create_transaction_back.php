@@ -63,50 +63,67 @@
 
             $receiver = $_POST["receiver"];
 
-            $sql = "SELECT * FROM accounts WHERE Account_No = '{$account_No}' ";
+            $sql = "SELECT * FROM transactions WHERE Account_No = '{$receiver}' ";
             $query = $db->query($sql);
-            $row = $query->fetch();
-
-            $balance = $row['Balance'];
-
-
-            //minimum balance check
-            if ( $balance - $amount > 2000 ) {
-
-                //update receiver balance
-                $balance = $balance - $amount;
-
-                $sql = "SELECT * FROM accounts WHERE Account_No = '{$receiver}' ";
-                $query = $db->query($sql);
-                $rows = $query->fetch();
-
-                //update receiver balance
-                $balanceRec = $rows['Balance'] + $amount;
-                
-                //queries for updating
-                $query = $db->query("UPDATE accounts SET Balance='{$balance}' WHERE Account_No='{$account_No}'");
-                $query = $db->query("UPDATE accounts SET Balance='{$balanceRec}' WHERE Account_No='{$receiver}'");
-
-                //inserting transaction to transfer table
-                $sql = "INSERT INTO transfer(Transferred_To, Transferred_From, Amount, Date)VALUES(?,?,?,?)";
-                $query = $db->prepare($sql);
-                $query->execute([$receiver, $account_No, $amount , $date]);
-                
-                //redit=rection
-                echo "<script type='text/javascript' >
-                    alert('Transfer Successful.')
-                    document.location='Create_transaction.php'
+        
+            $row_Count = $query->rowCount();
             
-                    </script>";
+            if ( $row_Count > 0 ) {
+
+                $sql = "SELECT * FROM accounts WHERE Account_No = '{$account_No}' ";
+                $query = $db->query($sql);
+                $row = $query->fetch();
+
+                $balance = $row['Balance'];
+
+
+                //minimum balance check
+                if ( $balance - $amount > 2000 ) {
+
+                    //update receiver balance
+                    $balance = $balance - $amount;
+
+                    $sql = "SELECT * FROM accounts WHERE Account_No = '{$receiver}' ";
+                    $query = $db->query($sql);
+                    $rows = $query->fetch();
+
+                    //update receiver balance
+                    $balanceRec = $rows['Balance'] + $amount;
+                    
+                    //queries for updating
+                    $query = $db->query("UPDATE accounts SET Balance='{$balance}' WHERE Account_No='{$account_No}'");
+                    $query = $db->query("UPDATE accounts SET Balance='{$balanceRec}' WHERE Account_No='{$receiver}'");
+
+                    //inserting transaction to transfer table
+                    $sql = "INSERT INTO transfer(Transferred_To, Transferred_From, Amount, Date)VALUES(?,?,?,?)";
+                    $query = $db->prepare($sql);
+                    $query->execute([$receiver, $account_No, $amount , $date]);
+                    
+                    //redit=rection
+                    echo "<script type='text/javascript' >
+                        alert('Transfer Successful.')
+                        document.location='Create_transaction.php'
+                
+                        </script>";
+                }
+                else {
+
+                    echo "<script type='text/javascript' >
+                        alert('Insufficient Balance.')
+                        document.location='Create_transaction.php'
+                
+                        </script>";
+                }
             }
             else {
 
                 echo "<script type='text/javascript' >
-                    alert('Insufficient Balance.')
-                    document.location='Create_transaction.php'
-            
-                    </script>";
+                alert('Wrong receiver account.')
+                document.location='Create_transaction.php'
+        
+                </script>";
             }
+            
         }   
     }
     catch(PDOException $e) {

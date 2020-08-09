@@ -6,6 +6,7 @@ function enableReceiver(flag) {
         document.getElementById("recacc").disabled = false;
         document.getElementById("rec").style.display = 'block';
         document.getElementById("createbtn").style.display = 'block';
+        document.getElementById("createbtn").disabled = false;
         
     }
     else if ( t.value != 'Money Transfer' && !flag ) {
@@ -13,11 +14,13 @@ function enableReceiver(flag) {
         document.getElementById("recacc").disabled = true;
         document.getElementById("rec").style.display = 'none';
         document.getElementById("createbtn").style.display = 'none';
+        document.getElementById("createbtn").disabled = true;
     }
     else if ( t.value == 'Money Transfer' && flag ) {
 
         document.getElementById("recacc").disabled = false;
         document.getElementById("rec").style.display = 'block';
+        document.getElementById("createbtn").disabled = false;
         
     }
     else {
@@ -39,10 +42,11 @@ function allowCreation(flag) {
         document.getElementById("A").style.display = 'block';
         document.getElementById("pending").style.display = 'flex';
         
-        
         document.getElementById("create").style.display = 'flex';
         document.getElementById("B").style.display = 'block';
+        document.getElementById("createbtn").disabled = true;
         document.getElementById("createbtn").style.display = 'none';
+        
 
     }
 }

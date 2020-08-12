@@ -1,3 +1,6 @@
+<?php
+	require "common variables/common_var.php";
+?>
 <html>
 <head>
 <title>Login Page </title>
@@ -46,23 +49,38 @@
 			</form>	
 			
 			<form id="register" method="POST" action="login/register_back.php" class="input">
+				
 				<input type="text" name="username" id="u_name" class="input-field" placeholder="Full Name" required>
+				
 				<input type="email" name="email" id="mail" class="input-field" placeholder="Email" required>
+				
 				<input type="password" name="password" id="pass" class="input-field" placeholder="Password" required>
+				
 				<br><br><br><br>
+				
 				<button type = "button"  id="register_btn" class="submit-btn" onclick="create_account()">Register</button>	
+				
 				<input type="text" name="address" id="address" class="input-field" placeholder="Address" required>
+				
 				<input type="number" name="phone" id="phone" class="input-field" placeholder="Phone no." required>
-				<input type="text" name="dob" id="dob" class="input-field" placeholder="Date of Birth" onfocus="(this.type='Date')" required>
+				
+				<input type="text" name="dob" id="dob" class="input-field" max = "<?php echo $age ?>" placeholder="Date of Birth" onfocus="(this.type='Date')" required>
+				
 				<input type="text" name="gid" id="govtid" class="input-field" placeholder="Government ID" required>
+				
 				<button type="submit" id="create_btn" class="submit-btn">Create Account</button>
 			</form>
 
 			<form id="admin_login" method="POST" action="login/signin_back.php" class="input1">
+				
 				<img class = "avatar" src="images/avatar.jpg"/>
+				
 				<br><br><br>
+				
 				<input type="text" name="username" class="input-field" placeholder="ID" required>
+				
 				<input type="password" name="password" class="input-field" placeholder="Password" required>
+				
 				<button type="submit" class="submit-btn">Sign In</button>	
 			</form>
 

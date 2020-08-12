@@ -63,7 +63,7 @@
 
             $receiver = $_POST["receiver"];
 
-            $sql = "SELECT * FROM transactions WHERE Account_No = '{$receiver}' ";
+            $sql = "SELECT * FROM accounts WHERE Account_No = '{$receiver}' ";
             $query = $db->query($sql);
         
             $row_Count = $query->rowCount();

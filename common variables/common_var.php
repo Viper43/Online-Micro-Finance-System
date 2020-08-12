@@ -11,5 +11,5 @@
     $max_td_tenure = 20;                                // maximum tenure of term deposit
     $max_loan_tenure = 240;                             //maximum tenure of loan
 
-    //$age = date_diff(date_create($currentDate), date_create($creation_date))->format("%a");
+    $age = date("Y-m-d", strtotime("-15 years", strtotime(date('d-m-Y'))));                 //age
 ?>

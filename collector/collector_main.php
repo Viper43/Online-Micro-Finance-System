@@ -51,28 +51,43 @@
             require "../connection.php";
             try 
             {
-                $query = $db->query("SELECT * FROM transactions WHERE Transaction_ID='{$tno}' AND status='Pending'");
-                $row_count = $query->rowCount();
-                if($row_count==0)
-                {
-                    $tno=" ";
-                    $accountno=" ";
-                    $date=" ";
-                    $type=" ";
-                    $amount=" ";
-                    $status=" ";
-                }
-                else
-                {
-                    foreach ($query as $row) 
+
+                $sql = "SELECT * FROM transactions WHERE Account_No = '{$trno}' ";
+                $query = $db->query($sql);
+                
+                $row_Count = $query->rowCount();
+                    
+                if ( $row_Count > 0 ) {
+
+                    $query = $db->query("SELECT * FROM transactions WHERE Transaction_ID='{$tno}' AND status='Pending'");
+                    $row_count = $query->rowCount();
+                    if($row_count==0)
                     {
-                        $tno=$row['Transaction_ID'];
-                        $accountno=$row['Account_No'];
-                        $date=$row['Date'];
-                        $type=$row['Type'];
-                        $amount=$row['Amount'];
-                        $status=$row['Status'];
+                        $tno=" ";
+                        $accountno=" ";
+                        $date=" ";
+                        $type=" ";
+                        $amount=" ";
+                        $status=" ";
                     }
+                    else
+                    {
+                        foreach ($query as $row) 
+                        {
+                            $tno=$row['Transaction_ID'];
+                            $accountno=$row['Account_No'];
+                            $date=$row['Date'];
+                            $type=$row['Type'];
+                            $amount=$row['Amount'];
+                            $status=$row['Status'];
+                        }
+                    }
+                }
+                else {
+                    echo "<script type='text/javascript' >
+                            alert('Invalid Transaction Id.')
+                            document.location='collector_main.php'
+                        </script>";
                 }
             }
             catch(PDOException $e)

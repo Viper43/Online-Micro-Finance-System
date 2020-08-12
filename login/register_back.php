@@ -30,7 +30,7 @@
 			else
 			{
 				echo "<script type='text/javascript' >
-                alert('Email id already registerred!')
+                alert('Email id already registerred! Please login')
                 document.location='../index.html'
 				</script>";
 			}

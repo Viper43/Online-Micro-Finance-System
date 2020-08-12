@@ -47,16 +47,33 @@
             }
             else {          //deposit
 
-                $sql = "INSERT INTO transactions(Type, Account_No, Date, Amount, Status)VALUES(?,?,?,?,?)";
-                $query = $db->prepare($sql);
-                $query->execute([$type, $account_No, $date, $amount, $status]);
+                $sql = "SELECT * FROM accounts WHERE Account_No = '{$account_No}' ";
+                $query = $db->query($sql);
+                $row = $query->fetch();
 
-                //redirecting
-                echo "<script type='text/javascript' >
-                alert('Transaction created successfully.')
-                document.location='Create_transaction.php'
-                
-                </script>";
+                if( $row['Balance'] == 0 && $amount < $min_balance ) {
+
+                    echo "<script type='text/javascript' >
+                        var amt = '$min_balance'
+                        alert('You dont have sufficient balance. Please deposit amount which is ' + amt )
+                        document.location='Create_transaction.php'
+                    
+                    </script>";
+                    
+                }
+                else {
+
+                    $sql = "INSERT INTO transactions(Type, Account_No, Date, Amount, Status)VALUES(?,?,?,?,?)";
+                    $query = $db->prepare($sql);
+                    $query->execute([$type, $account_No, $date, $amount, $status]);
+
+                    //redirecting
+                    echo "<script type='text/javascript' >
+                        alert('Transaction created successfully.')
+                        document.location='Create_transaction.php'
+                    
+                    </script>";
+                }
             }
         }
         else {              //money transfer

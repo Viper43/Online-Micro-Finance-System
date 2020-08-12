@@ -52,7 +52,7 @@
             try 
             {
 
-                $sql = "SELECT * FROM transactions WHERE Account_No = '{$trno}' ";
+                $sql = "SELECT * FROM transactions WHERE Transaction_ID = '{$tno}' ";
                 $query = $db->query($sql);
                 
                 $row_Count = $query->rowCount();

@@ -19,26 +19,29 @@ try
 	
 	if($td_amount < $min_td_amount)									//Check if TD is requested for amount lower than permissible
 	{
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Term Deposit lower than ₹5000 is not allowed.");'; 
-		echo 'window.location.href = "td.php";';
-		echo '</script>';
+		echo "<script type='text/javascript'> 
+			var td_amt = '$min_td_amount'
+			alert('Term Deposit lower than ' + td_amt + ' is not allowed.') 
+			window.location.href = 'td.php'
+		</script>";
 		
 	}
 	elseif($row['Balance'] < $min_balance)								//If minimum balance is not maintained, alert so
 	{
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Minimum Balance not maintained.");'; 
-		echo 'window.location.href = "td.php";';
-		echo '</script>';
+		echo "<script type='text/javascript'>
+			var amt = '$min_balance'
+			alert('Minimum Balance not maintained. Minimum balance required is' + amt ) 
+			window.location.href = 'td.php'
+		</script>";
 		
 	}
 	elseif($row['Balance'] < $td_amount)								// Check if current balance is insufficient for opening the TD
 	{
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Insufficient balance");'; 
-		echo 'window.location.href = "td.php";';
-		echo '</script>';
+		echo "<script type='text/javascript'>
+			var amt = '$min_balance'
+			alert('Insufficient balance. Minimum balance required is' + amt )
+			window.location.href = 'td.php'
+		</script>";
 	}
 	else															//Open TD
 	{

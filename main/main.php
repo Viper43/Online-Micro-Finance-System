@@ -87,7 +87,7 @@
                     
                     <div class="name">
                         <label  class="label-field">Password</label>
-                        <input type="text" id="password" name="password" class="input-field" value="<?php echo $password?>" disabled>
+                        <input type="password" onmousedown="this.type='text'" onmouseup="this.type='password'" onmouseout="this.type='password'" id="password" name="password" class="input-field" value="<?php echo $password?>" disabled>
                     </div>
                         <button type = "button" class="btn" id="edit" onclick="afterEdit()">EDIT</button>
                         <button type="submit" class="btn" id="save">SAVE</button>

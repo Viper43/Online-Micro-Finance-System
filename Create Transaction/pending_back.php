@@ -5,7 +5,7 @@
     
     try {
                             
-        $sql = "DELETE FROM transactions WHERE Transaction_Id = '{$transaction_Id}' ";
+        $sql = "DELETE FROM transactions WHERE Transaction_Id = '{$transaction_Id}' AND Status = 'Pending' ";
         $query = $db->query($sql);
                             
         echo "<script type='text/javascript' >

@@ -44,17 +44,17 @@
 			
 			<form id="login" method="POST" action="login/login_back.php" class="input">
 				<input type="email" name="email" class="input-field" placeholder="Email" required>
-				<input type="password" name="password" class="input-field" placeholder="Password" required>
+				<input type="password" onmousedown="this.type='text'" onmouseup="this.type='password'" onmouseout="this.type='password'" name="password" class="input-field" placeholder="Password" required>
 				<button type="submit" class="submit-btn">Login</button>
 			</form>	
 			
 			<form id="register" method="POST" action="login/register_back.php" class="input">
 				
-				<input type="text" name="username" id="u_name" class="input-field" placeholder="Full Name" required>
+				<input type="text" name="username" id="u_name" class="input-field" placeholder="Full Name" required onkeypress= "return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode == 32)" >
 				
 				<input type="email" name="email" id="mail" class="input-field" placeholder="Email" required>
 				
-				<input type="password" name="password" id="pass" class="input-field" placeholder="Password" required>
+				<input type="password" onmousedown="this.type='text'" onmouseup="this.type='password'" onmouseout="this.type='password'" name="password" id="pass" class="input-field" placeholder="Password (8 - 28 characters)" required>
 				
 				<br><br><br><br>
 				
@@ -62,7 +62,7 @@
 				
 				<input type="text" name="address" id="address" class="input-field" placeholder="Address" required>
 				
-				<input type="number" name="phone" id="phone" class="input-field" placeholder="Phone no." required>
+				<input type="number" min = "999999999" max = "10000000000" name="phone" id="phone" class="input-field" placeholder="Phone no." required>
 				
 				<input type="text" name="dob" id="dob" class="input-field" max = "<?php echo $age ?>" placeholder="Date of Birth" onfocus="(this.type='Date')" required>
 				
@@ -79,7 +79,7 @@
 				
 				<input type="text" name="username" class="input-field" placeholder="ID" required>
 				
-				<input type="password" name="password" class="input-field" placeholder="Password" required>
+				<input type="password" onmousedown="this.type='text'" onmouseup="this.type='password'" onmouseout="this.type='password'" name="password" class="input-field" placeholder="Password" required>
 				
 				<button type="submit" class="submit-btn">Sign In</button>	
 			</form>

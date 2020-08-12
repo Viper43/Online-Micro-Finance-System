@@ -24,14 +24,14 @@
 				$query->execute([$h,$b]);
 				echo "<script type='text/javascript' >
                 alert('Registerred successfully! Now login to the system')
-                document.location='../index.html'
+                document.location='../index.php'
 				</script>";
 			}
 			else
 			{
 				echo "<script type='text/javascript' >
                 alert('Email id already registerred! Please login')
-                document.location='../index.html'
+                document.location='../index.php'
 				</script>";
 			}
 		}

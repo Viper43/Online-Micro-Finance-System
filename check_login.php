@@ -4,7 +4,7 @@
 
         echo "<script type='text/javascript' >
                 alert('Please Login')
-                document.location='../index.html'
+                document.location='../index.php'
             </script>";
     }
 

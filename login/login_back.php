@@ -17,7 +17,7 @@
         if($row_count==0)
         {
             echo "<script type='text/javascript' >
-            document.location='../index.html'
+            document.location='../index.php'
             alert('Wrong email or password')
             </script>";     
         }

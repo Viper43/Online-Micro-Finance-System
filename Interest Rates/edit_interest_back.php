@@ -12,7 +12,8 @@
             if ( $type == 'Term Deposit' && $tenure > $max_td_tenure ) {
 
                 echo "<script type='text/javascript' >
-                    alert('Limit crossed. Limit is ' )
+                    var val = '$max_td_tenure'
+                    alert('Limit crossed. Limit is ' + val )
                     document.location='Interest_rates.php'
                 </script>";
             }
@@ -20,7 +21,8 @@
             elseif ( $type == 'Loan' && $tenure > $max_loan_tenure ) {
     
                 echo "<script type='text/javascript' >
-                    alert('Limit crossed. Limit is ' )
+                    var val = '$max_loan_tenure'
+                    alert('Limit crossed. Limit is ' + val )
                     document.location='Interest_rates.php'
                 </script>";
     
@@ -28,7 +30,7 @@
             elseif ( $type == 'Savings' && $tenure < 1 ) {
 
                 echo "<script type='text/javascript' >
-                    alert('Limit crossed. Limit is ')
+                    alert('Limit crossed. Limit is 1 ')
                     document.location='Interest_rates.php'
                 </script>";
                 

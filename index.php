@@ -62,7 +62,7 @@
 				
 				<input type="text" name="address" id="address" class="input-field" placeholder="Address" required>
 				
-				<input type="number" min = "999999999" max = "10000000000" name="phone" id="phone" class="input-field" placeholder="Phone no." required>
+				<input type="tel" name="phone" id="phone" class="input-field" pattern="[6-9]{1}[0-9]{9}" placeholder="Phone no." required>
 				
 				<input type="text" name="dob" id="dob" class="input-field" max = "<?php echo $age ?>" placeholder="Date of Birth" onfocus="(this.type='Date')" required>
 				

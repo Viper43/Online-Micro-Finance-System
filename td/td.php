@@ -15,7 +15,7 @@
 
     <title>Term Deposit</title>
     
-    <link rel = "icon" href = "images/favicon.png" type = "image/x-icon">
+    <link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
     <link href="styles/style.css?v=<?php echo time(); ?>" rel="stylesheet"> 
   </head>
 

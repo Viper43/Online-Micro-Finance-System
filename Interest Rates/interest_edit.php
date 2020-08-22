@@ -47,24 +47,24 @@
                  
                 <div class="container">
 
-                    <label  class="label-field" style = "display: none;"> TYPE
+                    <label  class="label-field" style = "display: none;"> I
                         <input type ="text" class = "input-field" name = "interestId" value = "<?php echo $id ?>" >
                     </label>
 
                     <label  class="label-field"> TYPE
-                        <input type ="text" class = "input-field" name = "interestType" value = "<?php echo $type ?>" >
+                        <input type ="text" class = "input-field" name = "interestType" readonly value = "<?php echo $type ?>" required >
                     </label>
                         
                     <br>
                         
                     <label  class="label-field" > RATE
-                        <input type="number" step = "0.01" class="input-field" min = "1" name="interestRate" value = "<?php echo $rate ?>"  >
+                        <input type="number" step = "0.01" class="input-field" min = "1" name="interestRate" value = "<?php echo $rate ?>" required >
                     </label>
                     
                     <br>
 
                     <label  class="label-field"> TENURE
-                        <input type ="number" class = "input-field" min = "1" name = "interestTenure" value = "<?php echo $tenure ?>"  >
+                        <input type ="number" class = "input-field" min = "1" name = "interestTenure" value = "<?php echo $tenure ?>" required >
                     </label>
 
                 </div>

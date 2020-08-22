@@ -39,8 +39,9 @@
                 }
                 else {
                     echo "<script type='text/javascript' >
-                    alert('Insufficient Balance.')
-                    document.location='Create_transaction.php'
+                        var amt = '$min_balance'
+                        alert('You dont have sufficient balance. Minimum balance should be ' + amt )
+                        document.location='Create_transaction.php'
                     
                     </script>";
                 }
@@ -126,10 +127,11 @@
                 else {
 
                     echo "<script type='text/javascript' >
-                        alert('Insufficient Balance.')
+                        var amt = '$min_balance'
+                        alert('You dont have sufficient balance. Minimum balance should be' + amt )
                         document.location='Create_transaction.php'
-                
-                        </script>";
+                    
+                    </script>";
                 }
             }
             else {

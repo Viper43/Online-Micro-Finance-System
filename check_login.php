@@ -7,5 +7,6 @@
                 document.location='../index.php'
             </script>";
     }
+    
 
 ?>

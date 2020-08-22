@@ -27,14 +27,15 @@ try
 		echo '</script>';
 		
 	}
-	elseif($row['Balance'] < $min_balance)								//If minimum balance is not maintained, alert so
+	elseif( $income < $ann_income )								//If annual income is lower than permissible
 	{
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Minimum Balance not maintained.");'; 
-		echo 'window.location.href = "loan.php";';
-		echo '</script>';
+		echo "<script type= 'text/javascript'>
+			var inc = '$ann_income' 
+			alert('Annual Income is below criteria. Criteria is ' + inc + ' and above.')
+			window.location.href = 'loan.php'
+		</script>";
 	}
-	elseif($row['Balance'] > ($loan_amount * $approval_percentage)) // Check if current balance is greater than specified percentage of loan amount
+	elseif($row['Balance'] > ($loan_amount * $approval_percentage) && date_diff(date_create($date), date_create($row['Creation_Date']))->format("%a") >= $customer_tenure ) // Check if current balance is greater than specified percentage of loan amount
 	{
 		//Add loan to loan table
 		$queryStr = "INSERT INTO loan(Account_No,Amount,Installments,Income,Creation_Date) VALUES(?,?,?,?,?)";

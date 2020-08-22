@@ -91,212 +91,226 @@
                     $account_No = $_POST["accountno"];
 
                     if ( $account_No != "" ) {
+
+                        $sql = "SELECT * FROM accounts WHERE accounts.Account_No = '{$account_No}' ";
+                        $query = $db->query($sql);
                         
-                        //personal details
-                        if ( isset($_POST["personalDetails"]) ) {
+                        $row_Count = $query->rowCount();
+                        if ( $row_Count == 0 ) {
                             
-                            ?>
-
-                            <h1 style = "font-family: sans-serif;font-size: 30;"> User Details </h1>
-
-                            <div class="table-wrapper" >
-                                <table class="fl-table">
-                                    <thead>
-                                        <tr>
-                                            <th> NAME </th>
-                                            <th> EMAIL ID </th>
-                                            <th> PHONE NO. </th>
-                                            <th> ADDRESS </th>
-                                            <th> D.O.B. </th>
-                                            <th> GOVT. ID </th>
-                                        </tr>
-                                    </thead>
-                        
-                                    <tbody>
-                                    
-                                        <?php
-                            
-                                            $sql = "SELECT * FROM users, accounts WHERE users.Email = accounts.Email AND accounts.Account_No = '{$account_No}' ";
-                                            $query = $db->query($sql);
-                                            foreach($db->query($sql) as $rows) {
-
-                                            ?>
-                                                
-                                                <tr>
-                                                    <td> <?php echo $rows['Name']; ?> </td>
-                                                    <td> <?php echo $rows['Email']; ?> </td>
-                                                    <td> <?php echo $rows['Phone_No']; ?> </td>
-                                                    <td> <?php echo $rows['Address']; ?> </td>
-                                                    <td> <?php echo $rows['DOB']; ?> </td>
-                                                    <td> <?php echo $rows['Govt_ID']; ?> </td>
-                                                </tr>
-                                                <?php
-                                            }
-                                        
-                                        ?>
-                                        
-                                    <tbody>
-                                </table>
-                            </div>
-                        
-                        <?php
-                        }
-
-                        //display account
-                        if ( isset($_POST["accountDetails"]) ) {
-
-                            ?>
-
-                            <h1 style = "font-family: sans-serif;font-size: 30;"> Account Details </h1>
-
-                            <div class="table-wrapper" >
-                                <table class="fl-table">
-                                    <thead>
-                                        <tr>
-                                            <th> NAME </th>
-                                            <th> ACCOUNT NO. </th>					
-                                            <th> BALANCE </th>
-                                            <th> CREATED ON </th>
-                                        </tr>
-                                    </thead>
-                        
-                                    <tbody>
-                                    
-                                        <?php
-                            
-                                            $sql = "SELECT * FROM users, accounts WHERE users.Email = accounts.Email AND accounts.Account_No = '{$account_No}' ";
-                                            $query = $db->query($sql);
-                                            foreach($db->query($sql) as $rows) {
-
-                                            ?>
-                                                
-                                                <tr>
-                                                    <td> <?php echo $rows['Name']; ?> </td>
-                                                    <td> <?php echo $rows['Account_No']; ?> </td>
-                                                    <td> <?php echo $rows['Balance']; ?> </td>
-                                                    <td> <?php echo $rows['Creation_Date']; ?> </td>
-                                                </tr>
-                                                <?php
-                                            }
-                                        
-                                        ?>
-                                        
-                                    <tbody>
-                                </table>
-                            </div>
-                        
-                        <?php
-
-                        }
-
-                        //display term deposits
-                        if ( isset($_POST["termDeposits"]) ) {
-
-                            ?>
-
-                            <h1 style = "font-family: sans-serif;font-size: 30;"> Term Deposit Details </h1>
-
-                            <div class="table-wrapper" >
-                                <table class="fl-table">
-                                    <thead>
-                                        <tr>
-                                            <th> ACCOUNT NO. </th>
-                                            <th> TERM DEPOSIT ID </th>
-                                            <th> TENURE </th>
-                                            <th> AMOUNT </th>
-                                            <th> CREATED ON </th>
-                                        </tr>
-                                    </thead>
-                        
-                                    <tbody>
-                                    
-                                        <?php
-                            
-                                            $sql = "SELECT * FROM td, accounts WHERE td.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
-                                            $query = $db->query($sql);
-                                            foreach($db->query($sql) as $rows) {
-
-                                            ?>
-                                                
-                                                <tr>
-                                                    <td> <?php echo $rows['Account_No']; ?> </td>
-                                                    <td> <?php echo $rows['TD_ID']; ?> </td>
-                                                    <td> <?php echo $rows['Tenure']; ?> </td>
-                                                    <td> <?php echo $rows['Amount']; ?> </td>
-                                                    <td> <?php echo $rows['Creation_Date']; ?> </td>
-                                                </tr>
-                                                <?php
-                                            }
-                                        
-                                        ?>
-                                        
-                                    <tbody>
-                                </table>
-                            </div>
-                        
-                        <?php
-
-                        }
-
-                        //display loan
-                        if ( isset($_POST["loans"]) ) {
-
-                            ?>
-
-                            <h1 style = "font-family: sans-serif;font-size: 30;"> Loan Details </h1>
-
-                            <div class="table-wrapper" >
-                                <table class="fl-table">
-                                    <thead>
-                                        <tr>
-                                            <th> ACCOUNT NO </th>
-                                            <th> LOAN ID </th>					
-                                            <th> NO. OF INSTALLMENTS </th>
-                                            <th> AMOUNT </th>
-                                            <th> CREATED ON </th>
-                                        </tr>
-                                    </thead>
-                        
-                                    <tbody>
-                                    
-                                        <?php
-                            
-                                            $sql = "SELECT * FROM loan, accounts WHERE loan.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
-                                            $query = $db->query($sql);
-                                            foreach($db->query($sql) as $rows) {
-
-                                            ?>
-                                                
-                                                <tr>
-                                                    <td> <?php echo $rows['Account_No']; ?> </td>
-                                                    <td> <?php echo $rows['Loan_Id']; ?> </td>
-                                                    <td> <?php echo $rows['Installments']; ?> </td>
-                                                    <td> <?php echo $rows['Amount']; ?> </td>
-                                                    <td> <?php echo $rows['Creation_Date']; ?> </td>
-                                                </tr>
-                                                <?php
-                                            }
-                                        
-                                        ?>
-                                        
-                                    <tbody>
-                                </table>
-                            </div>
-                        
-                        <?php
-
-                        }
-
-                        if ( empty($_POST["personalDetails"]) && empty($_POST["accountDetails"]) && empty($_POST["termDeposits"]) && empty($_POST["loans"]) ) {
-
                             echo "<script type='text/javascript' >
-                                alert('Checkbox not selected. Please select the required checkboxes to view the detalis' )
+                                alert('Invalid account number' )
                                 document.location='Admin_main.php'
                 
                             </script>";
-
                         }
+                        else {
 
+                            //personal details
+                            if ( isset($_POST["personalDetails"]) ) {
+                                
+                                ?>
+
+                                <h1 style = "font-family: sans-serif;font-size: 30;"> User Details </h1>
+
+                                <div class="table-wrapper" >
+                                    <table class="fl-table">
+                                        <thead>
+                                            <tr>
+                                                <th> NAME </th>
+                                                <th> EMAIL ID </th>
+                                                <th> PHONE NO. </th>
+                                                <th> ADDRESS </th>
+                                                <th> D.O.B. </th>
+                                                <th> GOVT. ID </th>
+                                            </tr>
+                                        </thead>
+                            
+                                        <tbody>
+                                        
+                                            <?php
+                                
+                                                $sql = "SELECT * FROM users, accounts WHERE users.Email = accounts.Email AND accounts.Account_No = '{$account_No}' ";
+                                                $query = $db->query($sql);
+                                                foreach($db->query($sql) as $rows) {
+
+                                                ?>
+                                                    
+                                                    <tr>
+                                                        <td> <?php echo $rows['Name']; ?> </td>
+                                                        <td> <?php echo $rows['Email']; ?> </td>
+                                                        <td> <?php echo $rows['Phone_No']; ?> </td>
+                                                        <td> <?php echo $rows['Address']; ?> </td>
+                                                        <td> <?php echo $rows['DOB']; ?> </td>
+                                                        <td> <?php echo $rows['Govt_ID']; ?> </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                            
+                                            ?>
+                                            
+                                        <tbody>
+                                    </table>
+                                </div>
+                            
+                            <?php
+                            }
+
+                            //display account
+                            if ( isset($_POST["accountDetails"]) ) {
+
+                                ?>
+
+                                <h1 style = "font-family: sans-serif;font-size: 30;"> Account Details </h1>
+
+                                <div class="table-wrapper" >
+                                    <table class="fl-table">
+                                        <thead>
+                                            <tr>
+                                                <th> NAME </th>
+                                                <th> ACCOUNT NO. </th>					
+                                                <th> BALANCE </th>
+                                                <th> CREATED ON </th>
+                                            </tr>
+                                        </thead>
+                            
+                                        <tbody>
+                                        
+                                            <?php
+                                
+                                                $sql = "SELECT * FROM users, accounts WHERE users.Email = accounts.Email AND accounts.Account_No = '{$account_No}' ";
+                                                $query = $db->query($sql);
+                                                foreach($db->query($sql) as $rows) {
+
+                                                ?>
+                                                    
+                                                    <tr>
+                                                        <td> <?php echo $rows['Name']; ?> </td>
+                                                        <td> <?php echo $rows['Account_No']; ?> </td>
+                                                        <td> <?php echo $rows['Balance']; ?> </td>
+                                                        <td> <?php echo $rows['Creation_Date']; ?> </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                            
+                                            ?>
+                                            
+                                        <tbody>
+                                    </table>
+                                </div>
+                            
+                            <?php
+
+                            }
+
+                            //display term deposits
+                            if ( isset($_POST["termDeposits"]) ) {
+
+                                ?>
+
+                                <h1 style = "font-family: sans-serif;font-size: 30;"> Term Deposit Details </h1>
+
+                                <div class="table-wrapper" >
+                                    <table class="fl-table">
+                                        <thead>
+                                            <tr>
+                                                <th> ACCOUNT NO. </th>
+                                                <th> TERM DEPOSIT ID </th>
+                                                <th> TENURE </th>
+                                                <th> AMOUNT </th>
+                                                <th> CREATED ON </th>
+                                            </tr>
+                                        </thead>
+                            
+                                        <tbody>
+                                        
+                                            <?php
+                                
+                                                $sql = "SELECT * FROM td, accounts WHERE td.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
+                                                $query = $db->query($sql);
+                                                foreach($db->query($sql) as $rows) {
+
+                                                ?>
+                                                    
+                                                    <tr>
+                                                        <td> <?php echo $rows['Account_No']; ?> </td>
+                                                        <td> <?php echo $rows['TD_ID']; ?> </td>
+                                                        <td> <?php echo $rows['Tenure']; ?> </td>
+                                                        <td> <?php echo $rows['Amount']; ?> </td>
+                                                        <td> <?php echo $rows['Creation_Date']; ?> </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                            
+                                            ?>
+                                            
+                                        <tbody>
+                                    </table>
+                                </div>
+                            
+                            <?php
+
+                            }
+
+                            //display loan
+                            if ( isset($_POST["loans"]) ) {
+
+                                ?>
+
+                                <h1 style = "font-family: sans-serif;font-size: 30;"> Loan Details </h1>
+
+                                <div class="table-wrapper" >
+                                    <table class="fl-table">
+                                        <thead>
+                                            <tr>
+                                                <th> ACCOUNT NO </th>
+                                                <th> LOAN ID </th>					
+                                                <th> NO. OF INSTALLMENTS </th>
+                                                <th> AMOUNT </th>
+                                                <th> CREATED ON </th>
+                                            </tr>
+                                        </thead>
+                            
+                                        <tbody>
+                                        
+                                            <?php
+                                
+                                                $sql = "SELECT * FROM loan, accounts WHERE loan.Account_No = accounts.Account_No AND accounts.Account_No = '{$account_No}' ";
+                                                $query = $db->query($sql);
+                                                foreach($db->query($sql) as $rows) {
+
+                                                ?>
+                                                    
+                                                    <tr>
+                                                        <td> <?php echo $rows['Account_No']; ?> </td>
+                                                        <td> <?php echo $rows['Loan_Id']; ?> </td>
+                                                        <td> <?php echo $rows['Installments']; ?> </td>
+                                                        <td> <?php echo $rows['Amount']; ?> </td>
+                                                        <td> <?php echo $rows['Creation_Date']; ?> </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                            
+                                            ?>
+                                            
+                                        <tbody>
+                                    </table>
+                                </div>
+                            
+                            <?php
+
+                            }
+
+                            if ( empty($_POST["personalDetails"]) && empty($_POST["accountDetails"]) && empty($_POST["termDeposits"]) && empty($_POST["loans"]) ) {
+
+                                echo "<script type='text/javascript' >
+                                    alert('Checkbox not selected. Please select the required checkboxes to view the detalis' )
+                                    document.location='Admin_main.php'
+                    
+                                </script>";
+
+                            }
+                        }
                     }
 
                     //display all section

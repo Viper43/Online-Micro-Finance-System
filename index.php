@@ -13,7 +13,7 @@
 		<!---------- Logo ------------------------------->
 
 		<div class="logo">
-			<img class="icon" src="images/icon.jpg"/>
+			<img class="icon" src="images/icon.jpg" alt="Logo of company"/>
 			<label class="logo-label">REPO FINANCES</label>
 		</div>
 		
@@ -30,7 +30,7 @@
 		<div class="form">
 			
 			<div id="choice" class="input1">
-				<img class = "avatar" src="images/avatar.jpg"/>
+				<img class = "avatar" src="images/avatar.jpg" alt="avatar"/>
 				<br><br><br><button type = "button" class="submit-btn" onclick="login()">User</button><br>
 				<h5>----------OR----------</h5>
 				<br><button type = "button" class="submit-btn" onclick="admin_login()">Admin</button>

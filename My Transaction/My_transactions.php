@@ -116,7 +116,7 @@
                                     <td> <?php echo $rows['Transfer_ID']; ?> </td>
                                     <td> <?php echo $rows['Transferred_To']; ?> </td>
                                     <td> <?php echo $rows['Transferred_From']; ?> </td>
-                                    <td> <?php echo $rows['Date']; ?> </td>
+                                    <td> <?php echo date_format(date_create($rows['Date']), "d-m-Y"); ?> </td>
                                     <td> <?php echo $rows['Amount']; ?> </td>
                                 </tr>
                                 <?php
